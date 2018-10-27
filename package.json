@@ -1,0 +1,32 @@
+{
+  "name": "revery-quick-start",
+  "version": "1.1.0",
+  "description": "Revery quickstart",
+  "license": "MIT",
+  "esy": {
+    "build": "refmterr dune build -p #{self.name}",
+    "buildsInSource": "_build"
+  },
+  "dependencies": {
+    "ocaml": "~4.6.0",
+    "@opam/ocamlbuild": "*",
+    "revery": "*",
+    "flex": "*"
+  },
+  "resolutions": {
+    "revery": "link:../revery",
+    "flex": "github:bryphe/flex#a73c134",
+    "reason-reactify": "github:bryphe/reason-reactify#fce2e20",
+    "reason-fontkit": "github:bryphe/reason-fontkit#9e4358e",
+    "reason-glfw": "github:bryphe/reason-glfw#34bee3d",
+    "reason-gl-matrix": "github:bryphe/reason-gl-matrix#20ba66e",
+    "esy-cmake": "github:esy-packages/esy-cmake#1a72dab",
+    "esy-freetype2": "github:bryphe/esy-freetype2#bdce79aa3",
+    "esy-harfbuzz": "github:bryphe/esy-harfbuzz#b9fcbe3"
+  },
+  "devDependencies": {
+    "ocaml": "~4.6.0",
+    "@opam/merlin": "*",
+    "@opam/dune": "*"
+  }
+}
