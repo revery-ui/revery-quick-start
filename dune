@@ -3,6 +3,8 @@
     (package App)
     (public_name App)
     (libraries
+        bigarray
+        reglfw
         revery
             ))
 (install
