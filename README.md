@@ -7,20 +7,25 @@ __Clone and run for a quick way to see Revery in action.__
 This is a minimal Revery application to get you started.
 
 The most important file here is:
-- `app.re` - This is the core application code, responsible for creating a window and rendering.
+- `app.re` - This is the core application code, responsible for __creating a window__ and __rendering__.
 
 A Revery application also needs these files:
-- `package.json` - lists the OCaml/Reason dependencies.
-- `dune` - build configuration file.
+- `package.json` - [esy configuration]() - lists the OCaml/Reason dependencies.
+- `dune` / `dune-project` - build configuration files used by [Dune](https://dune.readthedocs.io/en/latest/).
+- `.opam` - metadata used by the build system.
 
-## To Use
-
-#### Prerequisites
+### Prerequisites
 
 - Install [Git](https://git-scm.com/)
 - Install [Esy](https://esy.sh/)
 
-#### Build
+### Build
+
+- `esy install`
+- `esy build`
+
+The binary will be in the `_build/install/default/bin` - you can run it like:
+- `_build/install/default/bin/App.exe`
 
 ```
 # Clone the repository
@@ -37,6 +42,20 @@ _build/install/default/app.exe
 
 > __NOTE:__ The first build will take a while - building the OCaml compiler and dependencies takes time! Subsequent builds, though, should be very fast.
 
-## License
+### Resources
+
+- Check out the [official reason docs](https://reasonml.github.io/docs/en/what-and-why) to learn more about reason
+- Visit the Reason [discord channel](https://discordapp.com/invite/reasonml) and say hi!
+
+### Next steps
+
+Here's a few challenges to see if you've got the basics:
+
+- Change the text from 'Hello World' to something more interesting!
+- Add an Image component (Hint - you'll need to add the resource to the `dune` file, too)
+- Respond to user input
+- Create a frameless window
+
+### License
 
 [MIT License](LICENSE)
