@@ -4,7 +4,7 @@
   "description": "Revery quickstart",
   "license": "MIT",
   "esy": {
-    "build": "refmterr dune build -p #{self.name}",
+    "build": "refmterr dune build -p App",
     "buildsInSource": "_build"
   },
   "dependencies": {
@@ -14,7 +14,7 @@
     "flex": "*"
   },
   "resolutions": {
-    "revery": "link:../revery",
+    "revery": "github:bryphe/revery#307d4d1",
     "flex": "github:bryphe/flex#a73c134",
     "reason-reactify": "github:bryphe/reason-reactify#fce2e20",
     "reason-fontkit": "github:bryphe/reason-fontkit#9e4358e",

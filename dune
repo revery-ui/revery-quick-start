@@ -1,0 +1,11 @@
+(executable
+    (name App)
+    (package App)
+    (public_name App)
+    (libraries
+        revery
+            ))
+(install
+    (section bin)
+    (package App)
+    (files Lato-Regular.ttf))
