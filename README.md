@@ -35,6 +35,8 @@ esy build
 _build/install/default/app.exe
 ```
 
+> __NOTE:__ The first build will take a while - building the OCaml compiler and dependencies takes time! Subsequent builds, though, should be very fast.
+
 ## License
 
 [MIT License](LICENSE)
