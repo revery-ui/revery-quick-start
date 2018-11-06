@@ -3,14 +3,37 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
-pool:
-  vmImage: 'Ubuntu 16.04'
+name: $(Build.SourceVersion)
+jobs:
+- job: Linux
+  pool:
+    vmImage: 'Ubuntu 16.04'
+  steps:
+  - task: NodeTool@0
+    inputs:
+      versionSpec: '8.9'
+  - script: npm install -g esy0.3.4
+  - script: esy install
+  - script: esy build
 
-steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
+- job: MacOS
+  pool:
+    vmImage: 'macOS 10.13'
+  steps:
+  - task: NodeTool@0
+    inputs:
+      versionSpec: '8.9'
+  - script: npm install -g esy0.3.4
+  - script: esy install
+  - script: esy build
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+- job: Windows
+  pool:
+    vmImage: 'vs2017-win2016'
+  steps:
+  - task: NodeTool@0
+    inputs:
+      versionSpec: '8.9'
+  - script: npm install -g esy0.3.4
+  - script: esy install
+  - script: esy build
