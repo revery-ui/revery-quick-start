@@ -1,3 +1,5 @@
+[![Build Status](https://bryphe.visualstudio.com/revery-quick-start/_apis/build/status/build)](https://bryphe.visualstudio.com/revery-quick-start/_build/latest?definitionId=4)
+
 # revery-quick-start
 
 ---
