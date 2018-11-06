@@ -16,6 +16,8 @@ jobs:
   pool:
     vmImage: 'macOS 10.13'
   steps:
+  - script: brew update
+  - script: brew install libpng
   - template: esy-build-steps.yml
 
 - job: Windows
