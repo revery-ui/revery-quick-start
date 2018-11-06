@@ -1,6 +1,6 @@
 # Cross-platform set of build steps for building esy projects
 
--steps:
+- steps:
   - task: NodeTool@0
     inputs:
       versionSpec: '8.9'
