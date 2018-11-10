@@ -39,7 +39,7 @@ esy install
 # Build dependencies
 esy build
 # Run the app
-_build/install/default/app.exe
+_build/install/App.exe
 ```
 
 > __NOTE:__ The first build will take a while - building the OCaml compiler and dependencies takes time! Subsequent builds, though, should be very fast.
