@@ -18,7 +18,7 @@
     "revery": "github:bryphe/revery#0ebcbaf",
     "flex": "github:bryphe/flex#a73c134",
     "reason-fontkit": "github:bryphe/reason-fontkit#9e4358e",
-    "reason-glfw": "github:bryphe/reason-glfw#34bee3d",
+    "reason-glfw": "github:bryphe/reason-glfw#23e93cc",
     "reason-gl-matrix": "github:bryphe/reason-gl-matrix#20ba66e",
     "esy-cmake": "github:esy-packages/esy-cmake#37a86af",
     "esy-freetype2": "github:bryphe/esy-freetype2#bdce79aa3",
