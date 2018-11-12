@@ -11,22 +11,21 @@
     "ocaml": "~4.6.0",
     "@opam/ocamlbuild": "*",
     "revery": "*",
-    "flex": "*"
+    "flex": "*",
+    "reason-reactify": "^1.0.0",
+    "@opam/dune": "*"
   },
   "resolutions": {
-    "revery": "github:bryphe/revery#1d80217",
+    "revery": "github:bryphe/revery#0ebcbaf",
     "flex": "github:bryphe/flex#a73c134",
-    "reason-reactify": "github:bryphe/reason-reactify#fce2e20",
     "reason-fontkit": "github:bryphe/reason-fontkit#9e4358e",
-    "reason-glfw": "github:bryphe/reason-glfw#34bee3d",
-    "reason-gl-matrix": "github:bryphe/reason-gl-matrix#20ba66e",
+    "reason-glfw": "github:bryphe/reason-glfw#23e93cc",
     "esy-cmake": "github:esy-packages/esy-cmake#37a86af",
     "esy-freetype2": "github:bryphe/esy-freetype2#bdce79aa3",
     "esy-harfbuzz": "github:bryphe/esy-harfbuzz#b9fcbe3"
   },
   "devDependencies": {
     "ocaml": "~4.6.0",
-    "@opam/merlin": "*",
-    "@opam/dune": "*"
+    "@opam/merlin": "*"
   }
 }
