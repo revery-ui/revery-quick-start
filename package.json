@@ -12,7 +12,8 @@
     "@opam/ocamlbuild": "*",
     "revery": "*",
     "flex": "*",
-    "reason-reactify": "^1.0.0"
+    "reason-reactify": "^1.0.0",
+    "@opam/dune": "*"
   },
   "resolutions": {
     "revery": "github:bryphe/revery#0ebcbaf",
@@ -25,7 +26,6 @@
   },
   "devDependencies": {
     "ocaml": "~4.6.0",
-    "@opam/merlin": "*",
-    "@opam/dune": "*"
+    "@opam/merlin": "*"
   }
 }
