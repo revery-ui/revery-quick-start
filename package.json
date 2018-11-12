@@ -11,12 +11,12 @@
     "ocaml": "~4.6.0",
     "@opam/ocamlbuild": "*",
     "revery": "*",
-    "flex": "*"
+    "flex": "*",
+    "reason-reactify": "^1.0.0"
   },
   "resolutions": {
-    "revery": "github:bryphe/revery#1d80217",
+    "revery": "github:bryphe/revery#0ebcbaf",
     "flex": "github:bryphe/flex#a73c134",
-    "reason-reactify": "github:bryphe/reason-reactify#fce2e20",
     "reason-fontkit": "github:bryphe/reason-fontkit#9e4358e",
     "reason-glfw": "github:bryphe/reason-glfw#34bee3d",
     "reason-gl-matrix": "github:bryphe/reason-gl-matrix#20ba66e",
