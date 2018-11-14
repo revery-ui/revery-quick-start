@@ -33,7 +33,8 @@ bower_components
 build/Release
 
 # Dependency directories
-node_modules/
+# NOTE: this has no trailing slash since when using esy, it is a symlink
+node_modules
 jspm_packages/
 
 # TypeScript v1 declaration files
@@ -59,3 +60,12 @@ typings/
 
 # next.js build output
 .next
+
+# esy 
+_build/
+_esy/
+
+# reason
+*.install
+.merlin
+
