@@ -10,4 +10,6 @@ steps:
   - script: esy install
     continueOnError: true
   - script: esy install
+  - script: esy format
+  - script: git diff --no-ext-diff --quiet --exit-code
   - script: esy build

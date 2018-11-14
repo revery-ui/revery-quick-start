@@ -5,7 +5,7 @@ open Revery.UI;
 /* The 'main' function for our app */
 let init = app => {
   /* Create a window! */
-  let w = App.createWindow(app, "test");
+let w = App.createWindow(app, "test");
 
   /* Create a UI 'container' */
   let ui = UI.create(w);
