@@ -9,11 +9,8 @@
   },
   "dependencies": {
     "ocaml": "~4.6.0",
-    "revery": "^0.1.0",
+    "revery": "^0.2.0",
     "@opam/dune": "*"
-  },
-  "resolutions": {
-    "revery": "github:bryphe/revery#8289a7a"
   },
   "scripts": {
    "format": "bash -c \"refmt --in-place *.re\""
