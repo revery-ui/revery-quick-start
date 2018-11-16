@@ -9,23 +9,11 @@
   },
   "dependencies": {
     "ocaml": "~4.6.0",
-    "@opam/ocamlbuild": "*",
-    "revery": "*",
-    "flex": "*",
-    "reason-reactify": "^1.0.0",
+    "revery": "^0.2.0",
     "@opam/dune": "*"
   },
   "scripts": {
    "format": "bash -c \"refmt --in-place *.re\""
-  },
-  "resolutions": {
-    "revery": "github:bryphe/revery#0ebcbaf",
-    "flex": "github:bryphe/flex#a73c134",
-    "reason-fontkit": "github:bryphe/reason-fontkit#9e4358e",
-    "reason-glfw": "github:bryphe/reason-glfw#23e93cc",
-    "esy-cmake": "github:esy-packages/esy-cmake#37a86af",
-    "esy-freetype2": "github:bryphe/esy-freetype2#bdce79aa3",
-    "esy-harfbuzz": "github:bryphe/esy-harfbuzz#c5a68d6"
   },
   "devDependencies": {
     "ocaml": "~4.6.0",
