@@ -9,10 +9,9 @@
   },
   "dependencies": {
     "ocaml": "~4.6.0",
-    "@opam/ocamlbuild": "*",
     "revery": "^0.1.0",
-    "flex": "*",
-    "reason-reactify": "^1.0.0",
+    "flex": "^1.2.2",
+    "reason-fontkit": "^1.0.0",
     "@opam/dune": "*"
   },
   "scripts": {
