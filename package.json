@@ -13,7 +13,8 @@
     "@opam/dune": "*"
   },
   "scripts": {
-   "format": "bash -c \"refmt --in-place *.re\""
+   "format": "bash -c \"refmt --in-place *.re\"",
+   "run": "esy x App"
   },
   "devDependencies": {
     "ocaml": "~4.6.0",
