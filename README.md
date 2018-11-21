@@ -27,7 +27,12 @@ A Revery application also needs these files:
 - `esy build`
 
 The binary will be in the `_build/install/default/bin` - you can run it like:
-- `_build/install/default/bin/App.exe`
+
+- `_build/install/default/bin/App`
+
+or with esy:
+
+- `esy run`
 
 ```
 # Clone the repository
@@ -39,7 +44,7 @@ esy install
 # Build dependencies
 esy build
 # Run the app
-_build/install/App.exe
+esy run
 ```
 
 > __NOTE:__ The first build will take a while - building the OCaml compiler and dependencies takes time! Subsequent builds, though, should be very fast.
