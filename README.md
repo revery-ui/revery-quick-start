@@ -1,4 +1,4 @@
-[![Build Status](https://bryphe.visualstudio.com/revery-quick-start/_apis/build/status/build)](https://bryphe.visualstudio.com/revery-quick-start/_build/latest?definitionId=4)
+[![Build Status](https://dev.azure.com/revery-ui/revery/_apis/build/status/revery-ui.revery-quick-start?branchName=master)](https://dev.azure.com/revery-ui/revery/_build/latest?definitionId=4?branchName=master)
 
 # revery-quick-start
 
