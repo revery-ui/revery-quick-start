@@ -24,7 +24,7 @@
    "run": "esy x App"
   },
   "devDependencies": {
-    "ocaml": "~4.6.0",
+    "ocaml": "~4.7.0",
     "@opam/merlin": "*"
   }
 }

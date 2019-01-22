@@ -4,12 +4,25 @@ open Revery.Math;
 open Revery.UI;
 open Revery.UI.Components;
 
-module AnimatedText = (
-  val component((render, ~delay, ~textContent, ~children, ()) =>
-        render(
-          () => {
-            let opacity: float =
-              useAnimation(
+module AnimatedText {
+
+    let component = React.component("AnimatedText");
+
+    let make = (~delay, ~textContent, ()) => component((slots) => {
+            let (translate, slots) = Hooks.animation(
+                Animated.floatValue(50.),
+                {
+                    toValue: 0.,
+                    duration: Seconds(0.5),
+                    delay: Seconds(delay),
+                    repeat: false,
+                    easing: Animated.linear,
+                },
+                slots
+            );
+
+            let (opacity: float, _slots: React.Hooks.empty) =
+              Hooks.animation(
                 Animated.floatValue(0.),
                 {
                   toValue: 1.0,
@@ -18,19 +31,7 @@ module AnimatedText = (
                   repeat: false,
                   easing: Animated.linear,
                 },
-              );
-
-            let translate: float =
-              useAnimation(
-                Animated.floatValue(50.),
-                {
-                  toValue: 0.,
-                  duration: Seconds(0.5),
-                  delay: Seconds(delay),
-                  repeat: false,
-                  easing: Animated.linear,
-                },
-              );
+              slots);
 
             let textHeaderStyle =
               Style.make(
@@ -43,19 +44,19 @@ module AnimatedText = (
                 (),
               );
 
-            <text style=textHeaderStyle> textContent </text>;
-          },
-          ~children,
-        )
-      )
-);
+            <Text style=textHeaderStyle text={textContent} />;
+    });
 
-module SimpleButton = (
-  val component((render, ~children, ()) =>
-        render(
-          () => {
-            let (count, setCount) = useState(0);
+    let createElement = (~children as _, ~delay, ~textContent, ()) => React.element(make(~delay, ~textContent, ()));
+    
+};
 
+module SimpleButton = {
+    let component = React.component("SimpleButton");
+
+    let make = () => component((slots) => {
+        
+            let (count, setCount, _slots: React.Hooks.empty) = React.Hooks.state(0, slots);
             let increment = () => setCount(count + 1);
 
             let wrapperStyle =
@@ -77,21 +78,21 @@ module SimpleButton = (
 
             let textContent = "Click me: " ++ string_of_int(count);
             <Clickable onClick=increment>
-              <view style=wrapperStyle>
-                <text style=textHeaderStyle> textContent </text>
-              </view>
+              <View style=wrapperStyle>
+                <Text style=textHeaderStyle text={textContent} />
+              </View>
             </Clickable>;
-          },
-          ~children,
-        )
-      )
-);
+        
+    });
+
+    let createElement = (~children as _, ()) => React.element(make());
+};
 
 let init = app => {
   let win = App.createWindow(app, "Welcome to Revery!");
 
   let render = () =>
-    <view
+    <View
       style={Style.make(
         ~position=LayoutTypes.Absolute,
         ~justifyContent=LayoutTypes.JustifyCenter,
@@ -102,14 +103,14 @@ let init = app => {
         ~right=0,
         (),
       )}>
-      <view
+      <View
         style={Style.make(~flexDirection=Row, ~alignItems=AlignFlexEnd, ())}>
         <AnimatedText delay=0.0 textContent="Welcome" />
         <AnimatedText delay=0.5 textContent="to" />
         <AnimatedText delay=1. textContent="Revery" />
-      </view>
+      </View>
       <SimpleButton />
-    </view>;
+    </View>;
 
   UI.start(win, render);
 };
