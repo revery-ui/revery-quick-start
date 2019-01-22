@@ -4,88 +4,90 @@ open Revery.Math;
 open Revery.UI;
 open Revery.UI.Components;
 
-module AnimatedText {
+module AnimatedText = {
+  let component = React.component("AnimatedText");
 
-    let component = React.component("AnimatedText");
+  let make = (~delay, ~textContent, ()) =>
+    component(slots => {
+      let (translate, slots) =
+        Hooks.animation(
+          Animated.floatValue(50.),
+          {
+            toValue: 0.,
+            duration: Seconds(0.5),
+            delay: Seconds(delay),
+            repeat: false,
+            easing: Animated.linear,
+          },
+          slots,
+        );
 
-    let make = (~delay, ~textContent, ()) => component((slots) => {
-            let (translate, slots) = Hooks.animation(
-                Animated.floatValue(50.),
-                {
-                    toValue: 0.,
-                    duration: Seconds(0.5),
-                    delay: Seconds(delay),
-                    repeat: false,
-                    easing: Animated.linear,
-                },
-                slots
-            );
+      let (opacity: float, _slots: React.Hooks.empty) =
+        Hooks.animation(
+          Animated.floatValue(0.),
+          {
+            toValue: 1.0,
+            duration: Seconds(1.),
+            delay: Seconds(delay),
+            repeat: false,
+            easing: Animated.linear,
+          },
+          slots,
+        );
 
-            let (opacity: float, _slots: React.Hooks.empty) =
-              Hooks.animation(
-                Animated.floatValue(0.),
-                {
-                  toValue: 1.0,
-                  duration: Seconds(1.),
-                  delay: Seconds(delay),
-                  repeat: false,
-                  easing: Animated.linear,
-                },
-              slots);
+      let textHeaderStyle =
+        Style.make(
+          ~color=Colors.white,
+          ~fontFamily="Lato-Regular.ttf",
+          ~fontSize=24,
+          ~marginHorizontal=8,
+          ~opacity,
+          ~transform=[TranslateY(translate)],
+          (),
+        );
 
-            let textHeaderStyle =
-              Style.make(
-                ~color=Colors.white,
-                ~fontFamily="Lato-Regular.ttf",
-                ~fontSize=24,
-                ~marginHorizontal=8,
-                ~opacity,
-                ~transform=[TranslateY(translate)],
-                (),
-              );
-
-            <Text style=textHeaderStyle text={textContent} />;
+      <Text style=textHeaderStyle text=textContent />;
     });
 
-    let createElement = (~children as _, ~delay, ~textContent, ()) => React.element(make(~delay, ~textContent, ()));
-    
+  let createElement = (~children as _, ~delay, ~textContent, ()) =>
+    React.element(make(~delay, ~textContent, ()));
 };
 
 module SimpleButton = {
-    let component = React.component("SimpleButton");
+  let component = React.component("SimpleButton");
 
-    let make = () => component((slots) => {
-        
-            let (count, setCount, _slots: React.Hooks.empty) = React.Hooks.state(0, slots);
-            let increment = () => setCount(count + 1);
+  let make = () =>
+    component(slots => {
+      let (count, setCount, _slots: React.Hooks.empty) =
+        React.Hooks.state(0, slots);
+      let increment = () => setCount(count + 1);
 
-            let wrapperStyle =
-              Style.make(
-                ~backgroundColor=Color.rgba(1., 1., 1., 0.1),
-                ~border=Style.Border.make(~width=2, ~color=Colors.white, ()),
-                ~margin=16,
-                (),
-              );
+      let wrapperStyle =
+        Style.make(
+          ~backgroundColor=Color.rgba(1., 1., 1., 0.1),
+          ~border=Style.Border.make(~width=2, ~color=Colors.white, ()),
+          ~margin=16,
+          (),
+        );
 
-            let textHeaderStyle =
-              Style.make(
-                ~color=Colors.white,
-                ~fontFamily="Lato-Regular.ttf",
-                ~fontSize=20,
-                ~margin=4,
-                (),
-              );
+      let textHeaderStyle =
+        Style.make(
+          ~color=Colors.white,
+          ~fontFamily="Lato-Regular.ttf",
+          ~fontSize=20,
+          ~margin=4,
+          (),
+        );
 
-            let textContent = "Click me: " ++ string_of_int(count);
-            <Clickable onClick=increment>
-              <View style=wrapperStyle>
-                <Text style=textHeaderStyle text={textContent} />
-              </View>
-            </Clickable>;
-        
+      let textContent = "Click me: " ++ string_of_int(count);
+      <Clickable onClick=increment>
+        <View style=wrapperStyle>
+          <Text style=textHeaderStyle text=textContent />
+        </View>
+      </Clickable>;
     });
 
-    let createElement = (~children as _, ()) => React.element(make());
+  let createElement = (~children as _, ()) => React.element(make());
 };
 
 let init = app => {
