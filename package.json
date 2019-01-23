@@ -8,22 +8,23 @@
     "buildsInSource": "_build"
   },
   "dependencies": {
-    "ocaml": "~4.6.0",
-    "revery": "0.3.1",
+    "ocaml": "~4.7.0",
+    "revery": "0.4.0",
     "@opam/dune": "*"
   },
   "resolutions": {
     "@opam/cmdliner": "1.0.2",
     "@opam/js_of_ocaml": "github:ocsigen/js_of_ocaml:js_of_ocaml.opam#db257ce",
     "@opam/js_of_ocaml-compiler": "github:ocsigen/js_of_ocaml:js_of_ocaml-compiler.opam#db257ce",
-    "@esy-ocaml/reason": "facebook/reason#ab49908"
+    "@esy-ocaml/reason": "facebook/reason#ab49908",
+    "@brisk/brisk-reconciler": "github:briskml/brisk-reconciler#f545ba0"
   },
   "scripts": {
    "format": "bash -c \"refmt --in-place *.re\"",
    "run": "esy x App"
   },
   "devDependencies": {
-    "ocaml": "~4.6.0",
+    "ocaml": "~4.7.0",
     "@opam/merlin": "*"
   }
 }

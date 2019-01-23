@@ -7,7 +7,3 @@
         reglfw
         Revery
             ))
-(install
-    (section bin)
-    (package App)
-    (files Lato-Regular.ttf))
