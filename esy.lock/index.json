@@ -1,5 +1,5 @@
 {
-  "checksum": "c234c2dd6ab85157f8096eafb1b35bf9",
+  "checksum": "7ef97b35ddcde1a6b294bdad25985806",
   "root": "revery-quick-start@link:./package.json",
   "node": {
     "revery-quick-start@link:./package.json": {
@@ -9,28 +9,28 @@
       "source": { "type": "link", "path": ".", "manifest": "package.json" },
       "overrides": [],
       "dependencies": [
-        "revery@0.4.0@d41d8cd9", "ocaml@4.7.1003@d41d8cd9",
+        "revery@0.5.1@d41d8cd9", "ocaml@4.7.1003@d41d8cd9",
         "@opam/dune@opam:1.6.3@a7d7baed"
       ],
       "devDependencies": [
         "ocaml@4.7.1003@d41d8cd9", "@opam/merlin@opam:3.2.2@829ee6dd"
       ]
     },
-    "revery@0.4.0@d41d8cd9": {
-      "id": "revery@0.4.0@d41d8cd9",
+    "revery@0.5.1@d41d8cd9": {
+      "id": "revery@0.5.1@d41d8cd9",
       "name": "revery",
-      "version": "0.4.0",
+      "version": "0.5.1",
       "source": {
         "type": "install",
         "source": [
-          "archive:https://registry.npmjs.org/revery/-/revery-0.4.0.tgz#sha1:09434f29a40490bbd33a0dd33a6512d066f8b552"
+          "archive:https://registry.npmjs.org/revery/-/revery-0.5.1.tgz#sha1:bb3801a43a328c49040882c02030d08790139ace"
         ]
       },
       "overrides": [],
       "dependencies": [
-        "reason-glfw@3.2.1011@d41d8cd9",
+        "reason-glfw@3.2.1012@d41d8cd9",
         "reason-gl-matrix@0.9.9302@d41d8cd9",
-        "reason-fontkit@2.0.5@d41d8cd9", "ocaml@4.7.1003@d41d8cd9",
+        "reason-fontkit@2.0.6@d41d8cd9", "ocaml@4.7.1003@d41d8cd9",
         "flex@1.2.2@d41d8cd9", "@opam/lwt_ppx@opam:1.2.1@db1172a7",
         "@opam/lwt@opam:4.1.0@111fc2bf",
         "@opam/js_of_ocaml-lwt@opam:3.3.0@ff746e31",
@@ -38,7 +38,7 @@
         "@opam/js_of_ocaml@github:ocsigen/js_of_ocaml:js_of_ocaml.opam#db257ce@d41d8cd9",
         "@opam/color@opam:0.2.0@8ef09171",
         "@esy-ocaml/reason@github:facebook/reason#ab49908@d41d8cd9",
-        "@brisk/brisk-reconciler@github:briskml/brisk-reconciler#f545ba0@d41d8cd9"
+        "@brisk/brisk-reconciler@github:briskml/brisk-reconciler#7901934@d41d8cd9"
       ],
       "devDependencies": []
     },
@@ -83,14 +83,14 @@
       ],
       "devDependencies": []
     },
-    "reason-glfw@3.2.1011@d41d8cd9": {
-      "id": "reason-glfw@3.2.1011@d41d8cd9",
+    "reason-glfw@3.2.1012@d41d8cd9": {
+      "id": "reason-glfw@3.2.1012@d41d8cd9",
       "name": "reason-glfw",
-      "version": "3.2.1011",
+      "version": "3.2.1012",
       "source": {
         "type": "install",
         "source": [
-          "archive:https://registry.npmjs.org/reason-glfw/-/reason-glfw-3.2.1011.tgz#sha1:caf283713728d653c4f8c1aab8d8591e1db159b7"
+          "archive:https://registry.npmjs.org/reason-glfw/-/reason-glfw-3.2.1012.tgz#sha1:c1c4383a235a29090fd2ed6f790cd1e7ffdd17ef"
         ]
       },
       "overrides": [],
@@ -127,21 +127,21 @@
       ],
       "devDependencies": []
     },
-    "reason-fontkit@2.0.5@d41d8cd9": {
-      "id": "reason-fontkit@2.0.5@d41d8cd9",
+    "reason-fontkit@2.0.6@d41d8cd9": {
+      "id": "reason-fontkit@2.0.6@d41d8cd9",
       "name": "reason-fontkit",
-      "version": "2.0.5",
+      "version": "2.0.6",
       "source": {
         "type": "install",
         "source": [
-          "archive:https://registry.npmjs.org/reason-fontkit/-/reason-fontkit-2.0.5.tgz#sha1:ab6bc9796b1c4815ac8366d1037f9ca9cddafd03"
+          "archive:https://registry.npmjs.org/reason-fontkit/-/reason-fontkit-2.0.6.tgz#sha1:5897569556ea778f9cee3f402812ce1b749a993a"
         ]
       },
       "overrides": [],
       "dependencies": [
-        "refmterr@3.1.10@d41d8cd9", "reason-glfw@3.2.1011@d41d8cd9",
+        "refmterr@3.1.10@d41d8cd9", "reason-glfw@3.2.1012@d41d8cd9",
         "reason-gl-matrix@0.9.9302@d41d8cd9",
-        "esy-harfbuzz@1.9.1004@d41d8cd9", "esy-freetype2@2.9.1001@d41d8cd9",
+        "esy-harfbuzz@1.9.1005@d41d8cd9", "esy-freetype2@2.9.1006@d41d8cd9",
         "esy-cmake@0.3.5@d41d8cd9", "@opam/dune@opam:1.6.3@a7d7baed",
         "@esy-ocaml/reason@github:facebook/reason#ab49908@d41d8cd9"
       ],
@@ -178,14 +178,14 @@
       ],
       "devDependencies": []
     },
-    "esy-harfbuzz@1.9.1004@d41d8cd9": {
-      "id": "esy-harfbuzz@1.9.1004@d41d8cd9",
+    "esy-harfbuzz@1.9.1005@d41d8cd9": {
+      "id": "esy-harfbuzz@1.9.1005@d41d8cd9",
       "name": "esy-harfbuzz",
-      "version": "1.9.1004",
+      "version": "1.9.1005",
       "source": {
         "type": "install",
         "source": [
-          "archive:https://registry.npmjs.org/esy-harfbuzz/-/esy-harfbuzz-1.9.1004.tgz#sha1:e90b888620a0a812fb66d9f582a58771cf64a5d7"
+          "archive:https://registry.npmjs.org/esy-harfbuzz/-/esy-harfbuzz-1.9.1005.tgz#sha1:04651c73d33ce8004e61fde35a7549a7b9e908b6"
         ]
       },
       "overrides": [],
@@ -206,14 +206,14 @@
       "dependencies": [ "esy-cmake@0.3.5@d41d8cd9" ],
       "devDependencies": []
     },
-    "esy-freetype2@2.9.1001@d41d8cd9": {
-      "id": "esy-freetype2@2.9.1001@d41d8cd9",
+    "esy-freetype2@2.9.1006@d41d8cd9": {
+      "id": "esy-freetype2@2.9.1006@d41d8cd9",
       "name": "esy-freetype2",
-      "version": "2.9.1001",
+      "version": "2.9.1006",
       "source": {
         "type": "install",
         "source": [
-          "archive:https://registry.npmjs.org/esy-freetype2/-/esy-freetype2-2.9.1001.tgz#sha1:6b22487d0fa4617822b1f02523eed64c300978c0"
+          "archive:https://registry.npmjs.org/esy-freetype2/-/esy-freetype2-2.9.1006.tgz#sha1:6c32a49543c273b427bbfb56c563e148006978bc"
         ]
       },
       "overrides": [],
@@ -1361,14 +1361,14 @@
       ],
       "devDependencies": [ "ocaml@4.7.1003@d41d8cd9" ]
     },
-    "@brisk/brisk-reconciler@github:briskml/brisk-reconciler#f545ba0@d41d8cd9": {
+    "@brisk/brisk-reconciler@github:briskml/brisk-reconciler#7901934@d41d8cd9": {
       "id":
-        "@brisk/brisk-reconciler@github:briskml/brisk-reconciler#f545ba0@d41d8cd9",
+        "@brisk/brisk-reconciler@github:briskml/brisk-reconciler#7901934@d41d8cd9",
       "name": "@brisk/brisk-reconciler",
-      "version": "github:briskml/brisk-reconciler#f545ba0",
+      "version": "github:briskml/brisk-reconciler#7901934",
       "source": {
         "type": "install",
-        "source": [ "github:briskml/brisk-reconciler#f545ba0" ]
+        "source": [ "github:briskml/brisk-reconciler#7901934" ]
       },
       "overrides": [],
       "dependencies": [
