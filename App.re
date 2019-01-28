@@ -38,7 +38,7 @@ module AnimatedText = {
       let textHeaderStyle =
         Style.make(
           ~color=Colors.white,
-          ~fontFamily="Lato-Regular.ttf",
+          ~fontFamily="Roboto-Regular.ttf",
           ~fontSize=24,
           ~marginHorizontal=8,
           ~opacity,
