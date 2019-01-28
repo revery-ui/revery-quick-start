@@ -90,22 +90,22 @@ module SimpleButton = {
 let init = app => {
   let win = App.createWindow(app, "Welcome to Revery!");
 
-  let containerStyle = Style.[
-    position(`Absolute),
-    justifyContent(`Center),
-    alignItems(`Center),
-    bottom(0),
-    top(0),
-    left(0),
-    right(0),
-];
+  let containerStyle =
+    Style.[
+      position(`Absolute),
+      justifyContent(`Center),
+      alignItems(`Center),
+      bottom(0),
+      top(0),
+      left(0),
+      right(0),
+    ];
 
   let innerStyle = Style.[flexDirection(`Row), alignItems(`FlexEnd)];
 
   let render = () =>
     <View style=containerStyle>
-      <View
-        style=innerStyle>
+      <View style=innerStyle>
         <AnimatedText delay=0.0 textContent="Welcome" />
         <AnimatedText delay=0.5 textContent="to" />
         <AnimatedText delay=1. textContent="Revery" />
