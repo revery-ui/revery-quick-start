@@ -1,4 +1,4 @@
 (install
     (section bin)
     (package App)
-    (files Lato-Regular.ttf))
+    (files Roboto-Regular.ttf))
