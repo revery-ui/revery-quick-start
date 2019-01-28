@@ -66,3 +66,5 @@ Here's a few challenges to see if you've got the basics:
 ### License
 
 [MIT License](LICENSE)
+
+Revery-quick-start also includes some assets (font files, etc) that have their own licensing terms. For these, see [ThirdPartyLicenses.txt](ThirdPartyLicenses.txt)
