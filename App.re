@@ -73,7 +73,7 @@ module SimpleButton = {
       let textHeaderStyle =
         Style.make(
           ~color=Colors.white,
-          ~fontFamily="Lato-Regular.ttf",
+          ~fontFamily="Roboto-Regular.ttf",
           ~fontSize=20,
           ~margin=4,
           (),
