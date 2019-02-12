@@ -7,7 +7,7 @@ open Revery.UI.Components;
 module AnimatedText = {
   let component = React.component("AnimatedText");
 
-  let make = (~delay, ~textContent, ()) =>
+  let createElement = (~children as _, ~delay, ~textContent, ()) =>
     component(slots => {
       let (translate, slots) =
         Hooks.animation(
@@ -47,15 +47,12 @@ module AnimatedText = {
 
       <Text style=textHeaderStyle text=textContent />;
     });
-
-  let createElement = (~children as _, ~delay, ~textContent, ()) =>
-    React.element(make(~delay, ~textContent, ()));
 };
 
 module SimpleButton = {
   let component = React.component("SimpleButton");
 
-  let make = () =>
+  let createElement = (~children as _, ()) =>
     component(slots => {
       let (count, setCount, _slots: React.Hooks.empty) =
         React.Hooks.state(0, slots);
@@ -83,8 +80,6 @@ module SimpleButton = {
         </View>
       </Clickable>;
     });
-
-  let createElement = (~children as _, ()) => React.element(make());
 };
 
 let init = app => {

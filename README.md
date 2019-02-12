@@ -19,7 +19,7 @@ A Revery application also needs these files:
 ### Prerequisites
 
 - Install [Git](https://git-scm.com/)
-- Install [Esy](https://esy.sh/) __0.4.9+__
+- Install [Esy](https://esy.sh/) __0.5.6+__
 
 ### Build
 
