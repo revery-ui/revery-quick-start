@@ -9,15 +9,15 @@
   },
   "dependencies": {
     "ocaml": "~4.7.0",
-    "revery": "0.5.1",
+    "revery": "*",
     "@opam/dune": "*"
   },
   "resolutions": {
     "@opam/cmdliner": "1.0.2",
     "@opam/js_of_ocaml": "github:ocsigen/js_of_ocaml:js_of_ocaml.opam#db257ce",
     "@opam/js_of_ocaml-compiler": "github:ocsigen/js_of_ocaml:js_of_ocaml-compiler.opam#db257ce",
-    "@esy-ocaml/reason": "facebook/reason#ab49908",
-    "@brisk/brisk-reconciler": "github:briskml/brisk-reconciler#7901934"
+    "@brisk/brisk-reconciler": "github:briskml/brisk-reconciler#d6a8f60",
+    "revery": "link-dev:../revery"
   },
   "scripts": {
    "format": "bash -c \"refmt --in-place *.re\"",
