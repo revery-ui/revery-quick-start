@@ -8,8 +8,8 @@ module AnimatedText = {
   let component = React.component("AnimatedText");
 
   let createElement = (~children as _, ~delay, ~textContent, ()) =>
-    component(slots => {
-      let (translate, slots) =
+    component(hooks => {
+      let (translate, hooks) =
         Hooks.animation(
           Animated.floatValue(50.),
           {
@@ -19,10 +19,10 @@ module AnimatedText = {
             repeat: false,
             easing: Animated.linear,
           },
-          slots,
+          hooks,
         );
 
-      let (opacityVal: float, _slots: React.Hooks.empty) =
+      let (opacityVal: float, hooks) =
         Hooks.animation(
           Animated.floatValue(0.),
           {
@@ -32,7 +32,7 @@ module AnimatedText = {
             repeat: false,
             easing: Animated.linear,
           },
-          slots,
+          hooks,
         );
 
       let textHeaderStyle =
@@ -45,7 +45,7 @@ module AnimatedText = {
           transform([Transform.TranslateY(translate)]),
         ];
 
-      <Text style=textHeaderStyle text=textContent />;
+      (hooks, <Text style=textHeaderStyle text=textContent />);
     });
 };
 
@@ -53,9 +53,9 @@ module SimpleButton = {
   let component = React.component("SimpleButton");
 
   let createElement = (~children as _, ()) =>
-    component(slots => {
-      let (count, setCount, _slots: React.Hooks.empty) =
-        React.Hooks.state(0, slots);
+    component(hooks => {
+      let (count, setCount, hooks) =
+        React.Hooks.state(0, hooks);
       let increment = () => setCount(count + 1);
 
       let wrapperStyle =
@@ -74,11 +74,11 @@ module SimpleButton = {
         ];
 
       let textContent = "Click me: " ++ string_of_int(count);
-      <Clickable onClick=increment>
+      (hooks, <Clickable onClick=increment>
         <View style=wrapperStyle>
           <Text style=textHeaderStyle text=textContent />
         </View>
-      </Clickable>;
+      </Clickable>);
     });
 };
 
