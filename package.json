@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "ocaml": "~4.7.0",
-    "revery": "^0.15.1",
+    "revery": "^0.18.0",
     "@opam/dune": "1.7.3"
   },
   "resolutions": {

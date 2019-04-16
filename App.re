@@ -17,6 +17,7 @@ module AnimatedText = {
             delay: Seconds(delay),
             repeat: false,
             easing: Animated.linear,
+            direction: `Normal,
           },
           hooks,
         );
@@ -30,6 +31,7 @@ module AnimatedText = {
             delay: Seconds(delay),
             repeat: false,
             easing: Animated.linear,
+            direction: `Normal,
           },
           hooks,
         );
@@ -97,7 +99,7 @@ let init = app => {
 
   let innerStyle = Style.[flexDirection(`Row), alignItems(`FlexEnd)];
 
-  let render = () =>
+  let element =
     <View style=containerStyle>
       <View style=innerStyle>
         <AnimatedText delay=0.0 textContent="Welcome" />
@@ -107,7 +109,7 @@ let init = app => {
       <SimpleButton />
     </View>;
 
-  UI.start(win, render);
+  let _ = UI.start(win, element);
 };
 
 App.start(init);
