@@ -2,6 +2,18 @@
     (name App)
     (package App)
     (public_name App)
+	(modules App)
+    (libraries
+        bigarray
+        reglfw
+        Revery
+            ))
+
+(executable
+    (name Minimal)
+    (package App)
+    (public_name Minimal)
+	(modules Minimal)
     (libraries
         bigarray
         reglfw
