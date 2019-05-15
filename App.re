@@ -3,36 +3,32 @@ open Revery.Math;
 open Revery.UI;
 open Revery.UI.Components;
 
-module AnimatedText = {
+let animatedText = {
   let component = React.component("AnimatedText");
 
-  let createElement = (~children as _, ~delay, ~textContent, ()) =>
+  (~children as _: list(React.syntheticElement), ~delay, ~textContent, ()) =>
     component(hooks => {
       let (translate, hooks) =
         Hooks.animation(
           Animated.floatValue(50.),
-          {
-            toValue: 0.,
-            duration: Seconds(0.5),
-            delay: Seconds(delay),
-            repeat: false,
-            easing: Animated.linear,
-            direction: `Normal,
-          },
+		  Animated.options(
+				~toValue=0.,
+				~duration=Seconds(0.5),
+				~delay=Seconds(delay),
+				(),
+		  ),
           hooks,
         );
 
       let (opacityVal: float, hooks) =
         Hooks.animation(
           Animated.floatValue(0.),
-          {
-            toValue: 1.0,
-            duration: Seconds(1.),
-            delay: Seconds(delay),
-            repeat: false,
-            easing: Animated.linear,
-            direction: `Normal,
-          },
+		  Animated.options(
+				~toValue=1.0,
+				~duration=Seconds(1.),
+				~delay=Seconds(delay),
+				(),
+		  ),
           hooks,
         );
 
@@ -50,10 +46,10 @@ module AnimatedText = {
     });
 };
 
-module SimpleButton = {
+let simpleButton = {
   let component = React.component("SimpleButton");
 
-  let createElement = (~children as _, ()) =>
+  (~children as _: list(React.syntheticElement), ()) =>
     component(hooks => {
       let (count, setCount, hooks) =
         React.Hooks.state(0, hooks);
@@ -102,11 +98,11 @@ let init = app => {
   let element =
     <View style=containerStyle>
       <View style=innerStyle>
-        <AnimatedText delay=0.0 textContent="Welcome" />
-        <AnimatedText delay=0.5 textContent="to" />
-        <AnimatedText delay=1. textContent="Revery" />
+        <animatedText delay=0.0 textContent="Welcome" />
+        <animatedText delay=0.5 textContent="to" />
+        <animatedText delay=1. textContent="Revery" />
       </View>
-      <SimpleButton />
+      <simpleButton />
     </View>;
 
   let _ = UI.start(win, element);
