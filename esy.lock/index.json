@@ -1,5 +1,5 @@
 {
-  "checksum": "3cb5e22f37c462be7b80a5db01e350b7",
+  "checksum": "84d64ea06d320e41dd0f1e5eb8f852c6",
   "root": "revery-quick-start@link-dev:./package.json",
   "node": {
     "revery-quick-start@link-dev:./package.json": {
@@ -13,21 +13,21 @@
       },
       "overrides": [],
       "dependencies": [
-        "revery@0.21.0@d41d8cd9", "ocaml@4.7.1004@d41d8cd9",
+        "revery@0.22.0@d41d8cd9", "ocaml@4.7.1004@d41d8cd9",
         "@opam/dune@opam:1.7.3@72aad784"
       ],
       "devDependencies": [
         "ocaml@4.7.1004@d41d8cd9", "@opam/merlin@opam:3.2.2@829ee6dd"
       ]
     },
-    "revery@0.21.0@d41d8cd9": {
-      "id": "revery@0.21.0@d41d8cd9",
+    "revery@0.22.0@d41d8cd9": {
+      "id": "revery@0.22.0@d41d8cd9",
       "name": "revery",
-      "version": "0.21.0",
+      "version": "0.22.0",
       "source": {
         "type": "install",
         "source": [
-          "archive:https://registry.npmjs.org/revery/-/revery-0.21.0.tgz#sha1:75dd2e7463b0a83f988fbe9c937d8e490549ca7c"
+          "archive:https://registry.npmjs.org/revery/-/revery-0.22.0.tgz#sha1:2a6d17e5a8f5e0e3959606ce82af6e23a32df3e8"
         ]
       },
       "overrides": [],
@@ -547,8 +547,8 @@
         "ocaml@4.7.1004@d41d8cd9", "@opam/base-bytes@opam:base@19d0c2ff"
       ]
     },
-    "@opam/ppx_tools_versioned@opam:5.2.1@1eeea765": {
-      "id": "@opam/ppx_tools_versioned@opam:5.2.1@1eeea765",
+    "@opam/ppx_tools_versioned@opam:5.2.1@9df88e52": {
+      "id": "@opam/ppx_tools_versioned@opam:5.2.1@9df88e52",
       "name": "@opam/ppx_tools_versioned",
       "version": "opam:5.2.1",
       "source": {
@@ -829,14 +829,14 @@
       "overrides": [],
       "dependencies": [
         "ocaml@4.7.1004@d41d8cd9",
-        "@opam/ppx_tools_versioned@opam:5.2.1@1eeea765",
+        "@opam/ppx_tools_versioned@opam:5.2.1@9df88e52",
         "@opam/ocaml-migrate-parsetree@opam:1.2.0@23e55f71",
         "@opam/lwt@opam:4.2.1@c1888ec9", "@opam/dune@opam:1.7.3@72aad784",
         "@esy-ocaml/substs@0.0.1@d41d8cd9"
       ],
       "devDependencies": [
         "ocaml@4.7.1004@d41d8cd9",
-        "@opam/ppx_tools_versioned@opam:5.2.1@1eeea765",
+        "@opam/ppx_tools_versioned@opam:5.2.1@9df88e52",
         "@opam/ocaml-migrate-parsetree@opam:1.2.0@23e55f71",
         "@opam/lwt@opam:4.2.1@c1888ec9"
       ]
@@ -955,14 +955,14 @@
       "overrides": [],
       "dependencies": [
         "ocaml@4.7.1004@d41d8cd9",
-        "@opam/ppx_tools_versioned@opam:5.2.1@1eeea765",
+        "@opam/ppx_tools_versioned@opam:5.2.1@9df88e52",
         "@opam/ocaml-migrate-parsetree@opam:1.2.0@23e55f71",
         "@opam/js_of_ocaml@github:ocsigen/js_of_ocaml:js_of_ocaml.opam#db257ce@d41d8cd9",
         "@opam/dune@opam:1.7.3@72aad784", "@esy-ocaml/substs@0.0.1@d41d8cd9"
       ],
       "devDependencies": [
         "ocaml@4.7.1004@d41d8cd9",
-        "@opam/ppx_tools_versioned@opam:5.2.1@1eeea765",
+        "@opam/ppx_tools_versioned@opam:5.2.1@9df88e52",
         "@opam/ocaml-migrate-parsetree@opam:1.2.0@23e55f71",
         "@opam/js_of_ocaml@github:ocsigen/js_of_ocaml:js_of_ocaml.opam#db257ce@d41d8cd9"
       ]
@@ -1035,14 +1035,14 @@
       "overrides": [],
       "dependencies": [
         "ocaml@4.7.1004@d41d8cd9", "@opam/uchar@opam:0.0.2@c8218eea",
-        "@opam/ppx_tools_versioned@opam:5.2.1@1eeea765",
+        "@opam/ppx_tools_versioned@opam:5.2.1@9df88e52",
         "@opam/ocaml-migrate-parsetree@opam:1.2.0@23e55f71",
         "@opam/js_of_ocaml-compiler@github:ocsigen/js_of_ocaml:js_of_ocaml-compiler.opam#db257ce@d41d8cd9",
         "@opam/dune@opam:1.7.3@72aad784", "@esy-ocaml/substs@0.0.1@d41d8cd9"
       ],
       "devDependencies": [
         "ocaml@4.7.1004@d41d8cd9", "@opam/uchar@opam:0.0.2@c8218eea",
-        "@opam/ppx_tools_versioned@opam:5.2.1@1eeea765",
+        "@opam/ppx_tools_versioned@opam:5.2.1@9df88e52",
         "@opam/ocaml-migrate-parsetree@opam:1.2.0@23e55f71",
         "@opam/js_of_ocaml-compiler@github:ocsigen/js_of_ocaml:js_of_ocaml-compiler.opam#db257ce@d41d8cd9"
       ]
