@@ -11,24 +11,24 @@ let animatedText = {
       let (translate, hooks) =
         Hooks.animation(
           Animated.floatValue(50.),
-		  Animated.options(
-				~toValue=0.,
-				~duration=Seconds(0.5),
-				~delay=Seconds(delay),
-				(),
-		  ),
+          Animated.options(
+            ~toValue=0.,
+            ~duration=Seconds(0.5),
+            ~delay=Seconds(delay),
+            (),
+          ),
           hooks,
         );
 
       let (opacityVal: float, hooks) =
         Hooks.animation(
           Animated.floatValue(0.),
-		  Animated.options(
-				~toValue=1.0,
-				~duration=Seconds(1.),
-				~delay=Seconds(delay),
-				(),
-		  ),
+          Animated.options(
+            ~toValue=1.0,
+            ~duration=Seconds(1.),
+            ~delay=Seconds(delay),
+            (),
+          ),
           hooks,
         );
 
@@ -51,8 +51,7 @@ let simpleButton = {
 
   (~children as _: list(React.syntheticElement), ()) =>
     component(hooks => {
-      let (count, setCount, hooks) =
-        React.Hooks.state(0, hooks);
+      let (count, setCount, hooks) = React.Hooks.state(0, hooks);
       let increment = () => setCount(count + 1);
 
       let wrapperStyle =
@@ -71,11 +70,14 @@ let simpleButton = {
         ];
 
       let textContent = "Click me: " ++ string_of_int(count);
-      (hooks, <Clickable onClick=increment>
-        <View style=wrapperStyle>
-          <Text style=textHeaderStyle text=textContent />
-        </View>
-      </Clickable>);
+      (
+        hooks,
+        <Clickable onClick=increment>
+          <View style=wrapperStyle>
+            <Text style=textHeaderStyle text=textContent />
+          </View>
+        </Clickable>,
+      );
     });
 };
 
@@ -106,6 +108,7 @@ let init = app => {
     </View>;
 
   let _ = UI.start(win, element);
+  ();
 };
 
 App.start(init);
