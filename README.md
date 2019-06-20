@@ -36,7 +36,7 @@ or with esy:
 
 ```
 # Clone the repository
-git clone https://github.com/bryphe/revery-quick-start
+git clone https://github.com/revery-ui/revery-quick-start
 # Go into the repository
 cd revery-quick-start
 # Install dependencies
