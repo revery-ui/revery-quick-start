@@ -1,5 +1,5 @@
 {
-  "checksum": "84d64ea06d320e41dd0f1e5eb8f852c6",
+  "checksum": "6080350822e9b91adb2d51be738c818c",
   "root": "revery-quick-start@link-dev:./package.json",
   "node": {
     "revery-quick-start@link-dev:./package.json": {
@@ -13,21 +13,21 @@
       },
       "overrides": [],
       "dependencies": [
-        "revery@0.22.0@d41d8cd9", "ocaml@4.7.1004@d41d8cd9",
+        "revery@0.23.0@d41d8cd9", "ocaml@4.7.1004@d41d8cd9",
         "@opam/dune@opam:1.7.3@72aad784"
       ],
       "devDependencies": [
         "ocaml@4.7.1004@d41d8cd9", "@opam/merlin@opam:3.2.2@829ee6dd"
       ]
     },
-    "revery@0.22.0@d41d8cd9": {
-      "id": "revery@0.22.0@d41d8cd9",
+    "revery@0.23.0@d41d8cd9": {
+      "id": "revery@0.23.0@d41d8cd9",
       "name": "revery",
-      "version": "0.22.0",
+      "version": "0.23.0",
       "source": {
         "type": "install",
         "source": [
-          "archive:https://registry.npmjs.org/revery/-/revery-0.22.0.tgz#sha1:2a6d17e5a8f5e0e3959606ce82af6e23a32df3e8"
+          "archive:https://registry.npmjs.org/revery/-/revery-0.23.0.tgz#sha1:95e629eb3b76df0126208286e1f47fc9a609c9f5"
         ]
       },
       "overrides": [],
