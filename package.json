@@ -18,7 +18,8 @@
     "@opam/js_of_ocaml-compiler": "github:ocsigen/js_of_ocaml:js_of_ocaml-compiler.opam#db257ce",
     "@brisk/brisk-reconciler": "github:briskml/brisk-reconciler#daa00be",
     "rebez": "github:jchavarri/rebez#46cbc183",
-    "@brisk/brisk-reconciler": "github:briskml/brisk-reconciler#dd933fc"
+    "@brisk/brisk-reconciler": "github:briskml/brisk-reconciler#dd933fc",
+    "pesy": "0.4.1"
   },
   "scripts": {
    "format": "bash -c \"refmt --in-place *.re\"",
