@@ -37,12 +37,10 @@ let animatedText = {
           color(Colors.white),
           fontFamily("Roboto-Regular.ttf"),
           fontSize(24),
-          marginHorizontal(8),
-          opacity(opacityVal),
           transform([Transform.TranslateY(translate)]),
         ];
 
-      (hooks, <Text style=textHeaderStyle text=textContent />);
+      (hooks, <Opacity opacity=opacityVal><Padding padding=8><Text style=textHeaderStyle text=textContent /></Padding></Opacity>);
     });
 };
 
@@ -66,7 +64,6 @@ let simpleButton = {
           color(Colors.white),
           fontFamily("Roboto-Regular.ttf"),
           fontSize(20),
-          margin(4),
         ];
 
       let textContent = "Click me: " ++ string_of_int(count);
@@ -74,7 +71,9 @@ let simpleButton = {
         hooks,
         <Clickable onClick=increment>
           <View style=wrapperStyle>
-            <Text style=textHeaderStyle text=textContent />
+            <Padding padding=4>
+              <Text style=textHeaderStyle text=textContent />
+            </Padding>
           </View>
         </Clickable>,
       );
