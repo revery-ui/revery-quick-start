@@ -83,6 +83,8 @@ let simpleButton = {
 let init = app => {
   let win = App.createWindow(app, "Welcome to Revery!");
 
+  Revery.Log.listen((_, msg) => "LOG: " ++ msg);
+
   let containerStyle =
     Style.[
       position(`Absolute),
