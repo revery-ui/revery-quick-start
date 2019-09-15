@@ -40,7 +40,14 @@ let animatedText = {
           transform([Transform.TranslateY(translate)]),
         ];
 
-      (hooks, <Opacity opacity=opacityVal><Padding padding=8><Text style=textHeaderStyle text=textContent /></Padding></Opacity>);
+      (
+        hooks,
+        <Opacity opacity=opacityVal>
+          <Padding padding=8>
+            <Text style=textHeaderStyle text=textContent />
+          </Padding>
+        </Opacity>,
+      );
     });
 };
 
@@ -82,7 +89,7 @@ let simpleButton = {
 
 let init = app => {
   let _ = Revery.Log.listen((_, msg) => print_endline("LOG: " ++ msg));
-  
+
   let win = App.createWindow(app, "Welcome to Revery!");
 
   let containerStyle =
