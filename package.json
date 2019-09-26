@@ -7,6 +7,23 @@
     "build": "refmterr dune build -p App",
     "buildsInSource": "_build"
   },
+  "revery-packager": {
+    "bundleName": "ExampleApp",
+    "bundleId": "com.example.app",
+    "displayName": "Revery Example App",
+    "mainExecutable": "App",
+    "windows": {
+      "packages": ["zip"],
+      "iconFile": "assets/icon.ico"
+    },
+    "darwin": {
+      "packages": ["tar", "dmg"],
+      "iconFile": "assets/icon.icns"
+    },
+    "linux": {
+      "packages": ["tar", "appimage"]
+    }
+  },
   "dependencies": {
     "ocaml": "~4.7.0",
     "revery": "0.27.0",
@@ -25,9 +42,11 @@
   "scripts": {
    "format": "bash -c \"refmt --in-place *.re\"",
    "run": "esy x App"
+
   },
   "devDependencies": {
     "ocaml": "~4.7.0",
-    "@opam/merlin": "*"
+    "@opam/merlin": "*",
+    "esy-macdylibbundler": "*"
   }
 }
