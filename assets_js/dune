@@ -1,0 +1,4 @@
+(install
+    (section bin)
+    (package AppJs)
+    (files index.html gl-matrix-min.js))

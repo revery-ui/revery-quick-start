@@ -5,7 +5,10 @@
   "license": "MIT",
   "esy": {
     "build": "refmterr dune build -p App",
-    "buildsInSource": "_build"
+    "buildsInSource": "_build",
+    "install": [
+      "esy-installer App.install"
+    ]
   },
   "revery-packager": {
     "bundleName": "ExampleApp",

@@ -1,0 +1,27 @@
+{
+  "source": "./package.json",
+  "scripts": {
+      "run": "esy '@js' x bash -c 'http-server #{self.bin}'"
+  },
+  "override": {
+      "build": ["dune build --root . -j4"],
+      "install": [
+          "esy-installer App.install",
+          "esy-installer AppJs.install"
+      ],
+      "dependencies": {
+        "@opam/js_of_ocaml": "*",
+        "@opam/js_of_ocaml-compiler": "*",
+        "@opam/js_of_ocaml-lwt": "*",
+        "http-server": "*",
+        "@opam/merlin-extend": "0.4"
+      },
+      "resolutions": {
+        "ocaml-portaudio": "github:bryphe/ocaml-portaudio#c849b06",
+        "rebez": "github:jchavarri/rebez#46cbc183",
+        "rench": "github:revery-ui/rench#4554280",
+        "@brisk/brisk-reconciler": "github:briskml/brisk-reconciler#3d1ea3a",
+        "pesy": "0.4.1"
+      }
+  }
+}
