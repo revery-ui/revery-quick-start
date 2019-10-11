@@ -12,3 +12,7 @@ steps:
   - script: revery-packager
   # Run tests or any additional steps here
   # - script: esy b dune runtest
+  - script: esy @js install
+    displayName: 'esy @js install'
+  - script: esy @js build
+    displayName: 'esy @js build'
