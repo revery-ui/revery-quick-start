@@ -9,19 +9,21 @@ __Clone and run for a quick way to see Revery in action.__
 This is a minimal Revery application to get you started.
 
 The most important file here is:
-- `app.re` - This is the core application code, responsible for __creating a window__ and __rendering__.
+- `App.re` - This is the core application code, responsible for __creating a window__ and __rendering__.
 
 A Revery application also needs these files:
 - `package.json` - [esy configuration]() - lists the OCaml/Reason dependencies.
 - `dune` / `dune-project` - build configuration files used by [Dune](https://dune.readthedocs.io/en/latest/).
 - `.opam` - metadata used by the build system.
 
+For JS, we bundle several assets (an `index.html` and JS files in `assets_js`).
+
 ### Prerequisites
 
 - Install [Git](https://git-scm.com/)
 - Install [Esy](https://esy.sh/) __0.5.6+__
 
-### Build
+### Native Build
 
 - `esy install`
 - `esy build`
@@ -48,6 +50,17 @@ esy run
 ```
 
 > __NOTE:__ The first build will take a while - building the OCaml compiler and dependencies takes time! Subsequent builds, though, should be very fast.
+
+### JavaScript build
+
+- `esy '@js' install`
+- `esy '@js' build`
+
+You can run and test the JS build with:
+- `esy '@js' run`
+
+This will start up a local web server.
+
 
 ### Releasing
 
