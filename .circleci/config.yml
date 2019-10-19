@@ -1,0 +1,31 @@
+version: 2
+
+jobs:
+  build:
+    working_directory: ~/my-revery-starter
+    docker:
+      - image: node:8.1.4
+    steps:
+      - checkout
+      - run:
+          name: "Checking Versions"
+          command: |
+            node --version
+            npm --version
+      - run: sudo apt-get update
+      - run:
+          name: "Install required libs"
+          command: |
+            apt-get install -y libgl1-mesa-dev libglu1-mesa-dev libxrandr-dev libxinerama-dev libxcursor-dev libxi-dev libegl1-mesa-dev mesa-utils mesa-utils-extra ragel libgtk-3-dev
+      - run:
+          name: "Npm install esy"
+          command: |
+            npm install -g esy@0.5.8
+      - run:
+          name: "Esy install"
+          command: |
+            esy '@js' install
+      - run:
+          name: "Esy build"
+          command: |
+            esy '@js' build      
