@@ -9,7 +9,7 @@ module AnimatedText = {
         Animation.animate(Time.ms(500))
         |> Animation.delay(delay)
         |> Animation.ease(Easing.easeOut)
-        |> Animation.tween(50., 0.)
+        |> Animation.tween(50., 0.),
       );
 
     let%hook (animatedOpacity, _state, _reset) =
@@ -17,7 +17,7 @@ module AnimatedText = {
         Animation.animate(Time.seconds(1))
         |> Animation.delay(delay)
         |> Animation.ease(Easing.easeOut)
-        |> Animation.tween(0., 1.)
+        |> Animation.tween(0., 1.),
       );
 
     let textHeaderStyle =
@@ -87,9 +87,9 @@ let init = app => {
   let element =
     <View style=containerStyle>
       <View style=innerStyle>
-        <AnimatedText delay=Time.ms(0) textContent="Welcome" />
-        <AnimatedText delay=Time.ms(500) textContent="to" />
-        <AnimatedText delay=Time.ms(1000) textContent="Revery" />
+        <AnimatedText delay={Time.ms(0)} textContent="Welcome" />
+        <AnimatedText delay={Time.ms(500)} textContent="to" />
+        <AnimatedText delay={Time.ms(1000)} textContent="Revery" />
       </View>
       <SimpleButton />
     </View>;
