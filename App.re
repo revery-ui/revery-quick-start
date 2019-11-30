@@ -3,27 +3,21 @@ open Revery.UI;
 open Revery.UI.Components;
 
 module AnimatedText = {
-  let%component make = (~delay: float, ~textContent: string, ()) => {
-    let%hook (translate, _, _) =
+  let%component make = (~delay: Time.t, ~textContent: string, ()) => {
+    let%hook (translate, _state, _reset) =
       Hooks.animation(
-        Animated.floatValue(50.),
-        Animated.options(
-          ~toValue=0.,
-          ~duration=Time.seconds(0.5),
-          ~delay=Time.seconds(delay),
-          (),
-        ),
+        Animation.animate(Time.ms(500))
+        |> Animation.delay(delay)
+        |> Animation.ease(Easing.easeOut)
+        |> Animation.tween(50., 0.)
       );
 
-    let%hook (opacityVal: float, _, _) =
+    let%hook (animatedOpacity, _state, _reset) =
       Hooks.animation(
-        Animated.floatValue(0.),
-        Animated.options(
-          ~toValue=1.0,
-          ~duration=Time.seconds(1.),
-          ~delay=Time.seconds(delay),
-          (),
-        ),
+        Animation.animate(Time.seconds(1))
+        |> Animation.delay(delay)
+        |> Animation.ease(Easing.easeOut)
+        |> Animation.tween(0., 1.)
       );
 
     let textHeaderStyle =
@@ -34,7 +28,7 @@ module AnimatedText = {
         transform([Transform.TranslateY(translate)]),
       ];
 
-    <Opacity opacity=opacityVal>
+    <Opacity opacity=animatedOpacity>
       <Padding padding=8>
         <Text style=textHeaderStyle text=textContent />
       </Padding>
@@ -93,9 +87,9 @@ let init = app => {
   let element =
     <View style=containerStyle>
       <View style=innerStyle>
-        <AnimatedText delay=0.0 textContent="Welcome" />
-        <AnimatedText delay=0.5 textContent="to" />
-        <AnimatedText delay=1. textContent="Revery" />
+        <AnimatedText delay=Time.ms(0) textContent="Welcome" />
+        <AnimatedText delay=Time.ms(500) textContent="to" />
+        <AnimatedText delay=Time.ms(1000) textContent="Revery" />
       </View>
       <SimpleButton />
     </View>;
