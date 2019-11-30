@@ -29,17 +29,13 @@
   },
   "dependencies": {
     "ocaml": "~4.7.0",
-    "revery": "0.28.0",
-    "@opam/dune": "1.7.3"
+    "revery": "0.29.0"
   },
   "resolutions": {
     "@opam/cmdliner": "1.0.2",
-    "@opam/js_of_ocaml": "github:ocsigen/js_of_ocaml:js_of_ocaml.opam#db257ce",
-    "@opam/js_of_ocaml-compiler": "github:ocsigen/js_of_ocaml:js_of_ocaml-compiler.opam#db257ce",
     "pesy": "0.4.1",
     "rebez": "github:jchavarri/rebez#46cbc183",
-    "@opam/merlin-extend": "0.4",
-    "revery": "github:revery-ui/revery#700ecc7"
+    "@opam/merlin-extend": "0.4"
   },
   "scripts": {
    "format": "bash -c \"refmt --in-place *.re\"",
@@ -48,6 +44,7 @@
   },
   "devDependencies": {
     "ocaml": "~4.7.0",
+    "@opam/dune": "*",
     "@opam/merlin": "*",
     "esy-macdylibbundler": "*"
   }
