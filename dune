@@ -1,6 +1,7 @@
 (executable
     (name App)
     (package App)
+    (preprocess (pps brisk-reconciler.ppx))
     (js_of_ocaml (javascript_files stubs.js))
     (public_name App)
     (libraries
