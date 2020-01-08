@@ -1,13 +1,15 @@
 (executable
     (name App)
     (package App)
+    (preprocess (pps brisk-reconciler.ppx))
+    (js_of_ocaml (javascript_files stubs.js))
     (public_name App)
     (libraries
         bigarray
-        reglfw
         Revery
             ))
+
 (install
     (section bin)
-    (package App)
-    (files Lato-Regular.ttf))
+    (package AppJs)
+    (files App.bc.js))
