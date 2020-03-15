@@ -3,6 +3,10 @@
   "version": "1.3.0",
   "description": "Revery quickstart",
   "license": "MIT",
+  "scripts": {
+   "format": "bash -c \"refmt --in-place *.re\"",
+   "run": "esy x App"
+  },
   "esy": {
     "build": "refmterr dune build -p App",
     "buildsInSource": "_build",
@@ -28,24 +32,17 @@
     }
   },
   "dependencies": {
-    "ocaml": "~4.7.0",
-    "revery": "0.29.0"
+    "revery": "0.30.0",
+    "@opam/dune": "*",
+    "timber": "1.0.0"
   },
   "resolutions": {
     "@opam/cmdliner": "1.0.2",
-    "pesy": "0.4.1",
-    "rebez": "github:jchavarri/rebez#46cbc183",
-    "@opam/merlin-extend": "0.4"
-  },
-  "scripts": {
-   "format": "bash -c \"refmt --in-place *.re\"",
-   "run": "esy x App"
-
+    "esy-cmake": "prometheansacrifice/esy-cmake#2a47392def755",
+    "revery": "revery-ui/revery#1196f1b"
   },
   "devDependencies": {
-    "ocaml": "~4.7.0",
-    "@opam/dune": "*",
-    "@opam/merlin": "*",
-    "esy-macdylibbundler": "*"
+    "ocaml": "~4.8.0",
+    "@opam/merlin": "*"
   }
 }

@@ -24,7 +24,7 @@ module AnimatedText = {
       Style.[
         color(Colors.white),
         fontFamily("Roboto-Regular.ttf"),
-        fontSize(24),
+        fontSize(24.),
         transform([Transform.TranslateY(translate)]),
       ];
 
@@ -52,7 +52,7 @@ module SimpleButton = {
       Style.[
         color(Colors.white),
         fontFamily("Roboto-Regular.ttf"),
-        fontSize(20),
+        fontSize(20.),
       ];
 
     let textContent = "Click me: " ++ string_of_int(count);
@@ -67,7 +67,10 @@ module SimpleButton = {
 };
 
 let init = app => {
-  let _ = Revery.Log.listen((_, msg) => print_endline("LOG: " ++ msg));
+  Revery.App.initConsole();
+
+  Timber.App.enable();
+  Timber.App.setLevel(Timber.Level.perf);
 
   let win = App.createWindow(app, "Welcome to Revery!");
 
@@ -94,7 +97,7 @@ let init = app => {
       <SimpleButton />
     </View>;
 
-  let _ = UI.start(win, element);
+  let _: Revery.UI.renderFunction = UI.start(win, element);
   ();
 };
 
