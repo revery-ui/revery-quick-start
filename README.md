@@ -16,8 +16,6 @@ A Revery application also needs these files:
 - `dune` / `dune-project` - build configuration files used by [Dune](https://dune.readthedocs.io/en/latest/).
 - `.opam` - metadata used by the build system.
 
-For JS, we bundle several assets (an `index.html` and JS files in `assets_js`).
-
 ### Prerequisites
 
 See the [requirements for building Revery](https://github.com/revery-ui/revery/wiki/Building-&-Installing)
@@ -49,17 +47,6 @@ esy run
 ```
 
 > __NOTE:__ The first build will take a while - building the OCaml compiler and dependencies takes time! Subsequent builds, though, should be very fast.
-
-### JavaScript build
-
-- `esy '@js' install`
-- `esy '@js' build`
-
-You can run and test the JS build with:
-- `esy '@js' run`
-
-This will start up a local web server.
-
 
 ### Releasing
 
