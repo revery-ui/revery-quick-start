@@ -3,8 +3,19 @@ open Revery.UI;
 open Revery.UI.Components;
 
 module AnimatedText = {
-  let%component make = (~delay: Time.t, ~textContent: string, ()) => {
-    let%hook (translate, _state, _reset) =
+  module Styles = {
+    open Style;
+
+    let text = (~yOffset) => [
+      color(Colors.white),
+      fontFamily("Roboto-Regular.ttf"),
+      fontSize(24.),
+      transform([Transform.TranslateY(yOffset)]),
+    ];
+  };
+
+  let%component make = (~delay: Time.t, ~text: string, ()) => {
+    let%hook (yOffset, _state, _reset) =
       Hooks.animation(
         Animation.animate(Time.ms(500))
         |> Animation.delay(delay)
@@ -20,50 +31,69 @@ module AnimatedText = {
         |> Animation.tween(0., 1.),
       );
 
-    let textHeaderStyle =
-      Style.[
-        color(Colors.white),
-        fontFamily("Roboto-Regular.ttf"),
-        fontSize(24.),
-        transform([Transform.TranslateY(translate)]),
-      ];
-
     <Opacity opacity=animatedOpacity>
       <Padding padding=8>
-        <Text style=textHeaderStyle text=textContent />
+        <Text style={Styles.text(~yOffset)} text />
       </Padding>
     </Opacity>;
   };
 };
 
 module SimpleButton = {
+  module Styles = {
+    open Style;
+
+    let button = [
+      backgroundColor(Color.rgba(1., 1., 1., 0.1)),
+      border(~width=2, ~color=Colors.white),
+      margin(16),
+    ];
+
+    let text = [
+      color(Colors.white),
+      fontFamily("Roboto-Regular.ttf"),
+      fontSize(20.),
+    ];
+  };
+
   let%component make = () => {
     let%hook (count, setCount) = React.Hooks.state(0);
-    let increment = () => setCount(_ => count + 1);
+    let increment = () => setCount(count => count + 1);
 
-    let wrapperStyle =
-      Style.[
-        backgroundColor(Color.rgba(1., 1., 1., 0.1)),
-        border(~width=2, ~color=Colors.white),
-        margin(16),
-      ];
-
-    let textHeaderStyle =
-      Style.[
-        color(Colors.white),
-        fontFamily("Roboto-Regular.ttf"),
-        fontSize(20.),
-      ];
-
-    let textContent = "Click me: " ++ string_of_int(count);
+    let text = "Click me: " ++ string_of_int(count);
     <Clickable onClick=increment>
-      <View style=wrapperStyle>
-        <Padding padding=4>
-          <Text style=textHeaderStyle text=textContent />
-        </Padding>
+      <View style=Styles.button>
+        <Padding padding=4> <Text style=Styles.text text /> </Padding>
       </View>
     </Clickable>;
   };
+};
+
+let main = () => {
+  module Styles = {
+    open Style;
+
+    let container = [
+      position(`Absolute),
+      justifyContent(`Center),
+      alignItems(`Center),
+      bottom(0),
+      top(0),
+      left(0),
+      right(0),
+    ];
+
+    let inner = [flexDirection(`Row), alignItems(`FlexEnd)];
+  };
+
+  <View style=Styles.container>
+    <View style=Styles.inner>
+      <AnimatedText delay={Time.ms(0)} text="Welcome" />
+      <AnimatedText delay={Time.ms(500)} text="to" />
+      <AnimatedText delay={Time.ms(1000)} text="Revery" />
+    </View>
+    <SimpleButton />
+  </View>;
 };
 
 let init = app => {
@@ -74,30 +104,7 @@ let init = app => {
 
   let win = App.createWindow(app, "Welcome to Revery!");
 
-  let containerStyle =
-    Style.[
-      position(`Absolute),
-      justifyContent(`Center),
-      alignItems(`Center),
-      bottom(0),
-      top(0),
-      left(0),
-      right(0),
-    ];
-
-  let innerStyle = Style.[flexDirection(`Row), alignItems(`FlexEnd)];
-
-  let element =
-    <View style=containerStyle>
-      <View style=innerStyle>
-        <AnimatedText delay={Time.ms(0)} textContent="Welcome" />
-        <AnimatedText delay={Time.ms(500)} textContent="to" />
-        <AnimatedText delay={Time.ms(1000)} textContent="Revery" />
-      </View>
-      <SimpleButton />
-    </View>;
-
-  let _: Revery.UI.renderFunction = UI.start(win, element);
+  let _: Revery.UI.renderFunction = UI.start(win, <main />);
   ();
 };
 
