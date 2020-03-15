@@ -20,10 +20,7 @@ For JS, we bundle several assets (an `index.html` and JS files in `assets_js`).
 
 ### Prerequisites
 
-- Install [Git](https://git-scm.com/)
-- Install [Esy](https://esy.sh/) __0.5.6+__
-- Install [libpng](http://www.libpng.org/pub/png/libpng.html) (`brew install libpng` for MacOS users)
-- Install [ragel](http://www.colm.net/open-source/ragel/) (`brew install ragel` for MacOS users)
+See the [requirements for building Revery](https://github.com/revery-ui/revery/wiki/Building-&-Installing)
 
 ### Native Build
 
