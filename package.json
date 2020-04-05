@@ -33,12 +33,11 @@
   },
   "dependencies": {
     "revery": "revery-ui/revery#3c23304",
-    "@opam/dune": "*",
-    "timber": "1.0.0",
+    "@opam/dune": ">=1.1.0",
+    "timber": "^1.0.0",
     "esy-macdylibbundler": "*"
   },
   "resolutions": {
-    "@opam/cmdliner": "1.0.2",
     "esy-cmake": "prometheansacrifice/esy-cmake#2a47392def755"
   },
   "devDependencies": {

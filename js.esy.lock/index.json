@@ -1,5 +1,5 @@
 {
-  "checksum": "a3d8c0b9c69a3a0740cc096f7afada6f",
+  "checksum": "f165061a5f5f588aedd75f16b2540538",
   "root": "revery-quick-start@link-dev:./package.json",
   "node": {
     "yarn-pkg-config@github:esy-ocaml/yarn-pkg-config#cca65f99674ed2d954d28788edeb8c57fada5ed0@d41d8cd9": {
@@ -74,20 +74,19 @@
       "dependencies": [],
       "devDependencies": []
     },
-    "timber@1.0.0@d41d8cd9": {
-      "id": "timber@1.0.0@d41d8cd9",
+    "timber@1.3.0@d41d8cd9": {
+      "id": "timber@1.3.0@d41d8cd9",
       "name": "timber",
-      "version": "1.0.0",
+      "version": "1.3.0",
       "source": {
         "type": "install",
         "source": [
-          "archive:https://registry.npmjs.org/timber/-/timber-1.0.0.tgz#sha1:48d1db16eb32376d388880bd2d2af51b6776290b"
+          "archive:https://registry.npmjs.org/timber/-/timber-1.3.0.tgz#sha1:5bdf85a4054dfeba0a79a0c57e9b1bee25b8218f"
         ]
       },
       "overrides": [],
       "dependencies": [
-        "msgpack@1.0.3@d41d8cd9", "babel-runtime@6.26.0@d41d8cd9",
-        "babel-eslint@7.2.3@d41d8cd9"
+        "babel-runtime@6.26.0@d41d8cd9", "babel-eslint@7.2.3@d41d8cd9"
       ],
       "devDependencies": []
     },
@@ -157,7 +156,7 @@
       },
       "overrides": [ "js.json" ],
       "dependencies": [
-        "timber@1.0.0@d41d8cd9",
+        "timber@1.3.0@d41d8cd9",
         "revery@github:revery-ui/revery#3c23304@d41d8cd9",
         "http-server@0.12.1@d41d8cd9", "esy-macdylibbundler@0.4.5@d41d8cd9",
         "@opam/merlin-extend@opam:0.4@64c45329",
@@ -465,34 +464,6 @@
       },
       "overrides": [],
       "dependencies": [],
-      "devDependencies": []
-    },
-    "nan@2.14.0@d41d8cd9": {
-      "id": "nan@2.14.0@d41d8cd9",
-      "name": "nan",
-      "version": "2.14.0",
-      "source": {
-        "type": "install",
-        "source": [
-          "archive:https://registry.npmjs.org/nan/-/nan-2.14.0.tgz#sha1:7818f722027b2459a86f0295d434d1fc2336c52c"
-        ]
-      },
-      "overrides": [],
-      "dependencies": [],
-      "devDependencies": []
-    },
-    "msgpack@1.0.3@d41d8cd9": {
-      "id": "msgpack@1.0.3@d41d8cd9",
-      "name": "msgpack",
-      "version": "1.0.3",
-      "source": {
-        "type": "install",
-        "source": [
-          "archive:https://registry.npmjs.org/msgpack/-/msgpack-1.0.3.tgz#sha1:4106369ef1691a23884098c6217c4c07b95aa2f9"
-        ]
-      },
-      "overrides": [],
-      "dependencies": [ "nan@2.14.0@d41d8cd9" ],
       "devDependencies": []
     },
     "ms@2.1.2@d41d8cd9": {
