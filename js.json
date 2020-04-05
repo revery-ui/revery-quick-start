@@ -17,9 +17,7 @@
         "@opam/merlin-extend": "0.4"
       },
       "resolutions": {
-        "rebez": "github:jchavarri/rebez#46cbc183",
-        "rench": "github:revery-ui/rench#4554280",
-        "pesy": "0.4.1"
+        "esy-cmake": "prometheansacrifice/esy-cmake#2a47392def755"
       }
   }
 }
