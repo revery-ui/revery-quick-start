@@ -15,11 +15,6 @@
         "@opam/js_of_ocaml-lwt": "*",
         "http-server": "*",
         "@opam/merlin-extend": "0.4"
-      },
-      "resolutions": {
-        "rebez": "github:jchavarri/rebez#46cbc183",
-        "rench": "github:revery-ui/rench#4554280",
-        "pesy": "0.4.1"
       }
   }
 }
