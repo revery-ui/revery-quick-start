@@ -4,8 +4,8 @@
   "description": "Revery quickstart",
   "license": "MIT",
   "scripts": {
-   "format": "bash -c \"refmt --in-place *.re\"",
-   "run": "esy x App"
+    "format": "bash -c \"refmt --in-place **/*.re\"",
+    "run": "esy x App"
   },
   "esy": {
     "build": "refmterr dune build -p App",
@@ -20,15 +20,23 @@
     "displayName": "Revery Example App",
     "mainExecutable": "App",
     "windows": {
-      "packages": ["zip"],
+      "packages": [
+        "zip"
+      ],
       "iconFile": "assets/icon.ico"
     },
     "darwin": {
-      "packages": ["tar", "dmg"],
+      "packages": [
+        "tar",
+        "dmg"
+      ],
       "iconFile": "assets/icon.icns"
     },
     "linux": {
-      "packages": ["tar", "appimage"]
+      "packages": [
+        "tar",
+        "appimage"
+      ]
     }
   },
   "dependencies": {
