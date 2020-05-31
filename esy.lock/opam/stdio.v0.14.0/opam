@@ -11,8 +11,8 @@ build: [
 ]
 depends: [
   "ocaml" {>= "4.04.2"}
-  "base"  {>= "v0.13" & < "v0.14"}
-  "dune"  {>= "1.5.1"}
+  "base"  {>= "v0.14" & < "v0.15"}
+  "dune"  {>= "2.0.0"}
 ]
 synopsis: "Standard IO library for OCaml"
 description: "
@@ -22,6 +22,6 @@ It re-exports the input/output functions of the OCaml standard
 libraries using a more consistent API.
 "
 url {
-  src: "https://ocaml.janestreet.com/ocaml-core/v0.13/files/stdio-v0.13.0.tar.gz"
-  checksum: "md5=48ef28512ddd51ff9885649dd1fab91d"
+  src: "https://ocaml.janestreet.com/ocaml-core/v0.14/files/stdio-v0.14.0.tar.gz"
+  checksum: "md5=4cbdf15f0be88c3258aaeff9e04e00e9"
 }
