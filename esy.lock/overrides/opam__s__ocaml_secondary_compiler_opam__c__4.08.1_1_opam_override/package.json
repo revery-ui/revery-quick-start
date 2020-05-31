@@ -1,7 +1,5 @@
 {
     "build": [
-	["patch", "--strip", "1", "--input", "0001-Don-t-build-manpages-for-stdlib-docs.patch"],
-	[ "patch", "--strip", "1", "--input", "0001-Fix-failure-to-install-tools-links.patch"],
 	[
 	    "./esy-configure",
 	    "--disable-cfi",
