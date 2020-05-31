@@ -1,0 +1,19 @@
+{
+    "build": [
+	["patch", "--strip", "1", "--input", "0001-Don-t-build-manpages-for-stdlib-docs.patch"],
+	[ "patch", "--strip", "1", "--input", "0001-Fix-failure-to-install-tools-links.patch"],
+	[
+	    "./esy-configure",
+	    "--disable-cfi",
+	    "--prefix", "$cur__install/share",
+	    "--libdir", "$cur__install/share/lib",
+	    "--disable-debugger",
+	    "--disable-installing-bytecode-programs",
+	    "--disable-debug-runtime",
+	    "--disable-instrumented-runtime",
+	    "--disable-graph-lib"
+	],
+      "./esy-build"
+    ],
+    "buildsInSource": true
+}
