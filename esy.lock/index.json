@@ -1974,10 +1974,6 @@
         }
       },
       "overrides": [
-        {
-          "opamoverride":
-            "esy.lock/overrides/opam__s__dune_opam__c__2.5.1_opam_override"
-        }
       ],
       "dependencies": [
         "ocaml@4.9.1000@d41d8cd9",
