@@ -1189,12 +1189,12 @@
       ],
       "dependencies": [
         "@opam/ocamlfind@opam:1.8.1@ff07b0f9",
-        "@opam/ocaml-secondary-compiler@opam:4.08.1-1@11b323a6",
+        "@opam/ocaml-secondary-compiler@opam:4.08.1-1@285d05c7",
         "@esy-ocaml/substs@0.0.1@d41d8cd9"
       ],
       "devDependencies": [
         "@opam/ocamlfind@opam:1.8.1@ff07b0f9",
-        "@opam/ocaml-secondary-compiler@opam:4.08.1-1@11b323a6"
+        "@opam/ocaml-secondary-compiler@opam:4.08.1-1@285d05c7"
       ]
     },
     "@opam/ocamlfind@opam:1.8.1@ff07b0f9": {
@@ -1253,8 +1253,8 @@
       ],
       "devDependencies": [ "ocaml@4.9.1000@d41d8cd9" ]
     },
-    "@opam/ocaml-secondary-compiler@opam:4.08.1-1@11b323a6": {
-      "id": "@opam/ocaml-secondary-compiler@opam:4.08.1-1@11b323a6",
+    "@opam/ocaml-secondary-compiler@opam:4.08.1-1@285d05c7": {
+      "id": "@opam/ocaml-secondary-compiler@opam:4.08.1-1@285d05c7",
       "name": "@opam/ocaml-secondary-compiler",
       "version": "opam:4.08.1-1",
       "source": {
@@ -1269,12 +1269,7 @@
           "path": "esy.lock/opam/ocaml-secondary-compiler.4.08.1-1"
         }
       },
-      "overrides": [
-        {
-          "opamoverride":
-            "esy.lock/overrides/opam__s__ocaml_secondary_compiler_opam__c__4.08.1_1_opam_override"
-        }
-      ],
+      "overrides": [],
       "dependencies": [
         "ocaml@4.9.1000@d41d8cd9", "@esy-ocaml/substs@0.0.1@d41d8cd9"
       ],
