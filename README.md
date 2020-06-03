@@ -70,7 +70,6 @@ Once complete, there will be application packages available in the `_release` fo
 
 Here's a few challenges to see if you've got the basics:
 
-- Change the text from 'Hello World' to something more interesting!
 - Add an Image component
 - Respond to user input
 - Create a frameless window
