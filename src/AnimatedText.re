@@ -30,7 +30,7 @@ let%component make = (~delay: Time.t, ~text: string, ()) => {
     );
 
   <Opacity opacity=animatedOpacity>
-    <Padding padding=4>
+    <Padding padding=6>
       <Text fontSize=16. style={Styles.text(~yOffset)} text />
     </Padding>
   </Opacity>;
