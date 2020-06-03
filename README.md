@@ -30,7 +30,7 @@ Once built, the application binary will be in the `_build/install/default/bin` -
 
 - `_build/install/default/bin/App`
 
-or using esy with the script specified in [package.json](package.json):
+or using esy with the script specified in [package.json](package.json#L8):
 
 - `esy run`
 
