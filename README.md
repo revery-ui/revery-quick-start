@@ -63,20 +63,18 @@ Once complete, there will be application packages available in the `_release` fo
 
 ## Resources
 
-- Check out the [official reason docs](https://reasonml.github.io/docs/en/what-and-why) to learn more about reason
-- Visit the Reason [discord channel](https://discordapp.com/invite/reasonml) and say hi!
+- Check out the [Reason-documentation](https://reasonml.org) to learn more about Reason
+- Visit the Reason [Discord-channel](https://discordapp.com/invite/reasonml) and say hi!
 
 ## Next steps
 
 Here's a few challenges to see if you've got the basics:
 
 - Change the text from 'Hello World' to something more interesting!
-- Add an Image component (Hint - you'll need to add the resource to the `dune` file, too)
+- Add an Image component
 - Respond to user input
 - Create a frameless window
 
 ## License
 
 [MIT License](LICENSE)
-
-Revery-quick-start also includes some assets (font files, etc) that have their own licensing terms. For these, see [ThirdPartyLicenses.txt](ThirdPartyLicenses.txt)
