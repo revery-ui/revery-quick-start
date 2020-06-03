@@ -4,7 +4,6 @@ open Revery.UI;
 module Styles = {
   open Style;
 
-  Font.Family.default;
   let text = (~yOffset) => [
     color(Color.hex(Theme.reveryBlue)),
     transform([Transform.TranslateY(yOffset)]),
