@@ -1,7 +1,7 @@
 {
   "name": "revery-quick-start",
   "version": "1.4.0",
-  "description": "Revery quickstart",
+  "description": "A template for getting started with Revery",
   "license": "MIT",
   "scripts": {
     "format": "bash -c \"refmt --in-place **/*.re\"",
@@ -9,10 +9,7 @@
   },
   "esy": {
     "build": "refmterr dune build -p App",
-    "buildsInSource": "_build",
-    "install": [
-      "esy-installer App.install"
-    ]
+    "buildsInSource": "_build"
   },
   "revery-packager": {
     "bundleName": "ExampleApp",
@@ -47,6 +44,10 @@
   },
   "devDependencies": {
     "ocaml": "~4.9.0",
-    "@opam/ocaml-lsp-server": "ocaml/ocaml-lsp:ocaml-lsp-server.opam#04733ed"
+    "@opam/ocaml-lsp-server": "ocaml/ocaml-lsp:ocaml-lsp-server.opam#04733ed",
+    "revery": "*"
+  },
+  "resolutions": {
+    "revery": "link:../revery-master/package.json"
   }
 }
