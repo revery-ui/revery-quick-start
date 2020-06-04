@@ -1,5 +1,5 @@
 {
-  "checksum": "180ba6aeaccb0bff2aabc4c0187d2440",
+  "checksum": "d9bf5328aa5a73e1b91118bad5b14682",
   "root": "revery-quick-start@link-dev:./package.json",
   "node": {
     "yarn-pkg-config@github:esy-ocaml/yarn-pkg-config#db3a0b63883606dd57c54a7158d560d6cba8cd79@d41d8cd9": {
@@ -101,35 +101,37 @@
       },
       "overrides": [],
       "dependencies": [
-        "timber@1.0.0@d41d8cd9", "revery@link:../revery-master/package.json",
+        "timber@1.0.0@d41d8cd9",
+        "revery@github:revery-ui/revery#eecb96318c54761abe9cb60ed6986ab820c8cd46@d41d8cd9",
         "esy-macdylibbundler@0.4.5@d41d8cd9",
         "@opam/dune@opam:2.5.1@f38f376e"
       ],
       "devDependencies": [
-        "revery@link:../revery-master/package.json",
         "ocaml@4.9.1000@d41d8cd9",
         "@opam/ocaml-lsp-server@github:ocaml/ocaml-lsp:ocaml-lsp-server.opam#04733ed@d41d8cd9"
       ]
     },
-    "revery@link:../revery-master/package.json": {
-      "id": "revery@link:../revery-master/package.json",
+    "revery@github:revery-ui/revery#eecb96318c54761abe9cb60ed6986ab820c8cd46@d41d8cd9": {
+      "id":
+        "revery@github:revery-ui/revery#eecb96318c54761abe9cb60ed6986ab820c8cd46@d41d8cd9",
       "name": "revery",
-      "version": "link:../revery-master/package.json",
+      "version":
+        "github:revery-ui/revery#eecb96318c54761abe9cb60ed6986ab820c8cd46",
       "source": {
-        "type": "link",
-        "path": "../revery-master",
-        "manifest": "package.json"
+        "type": "install",
+        "source": [
+          "github:revery-ui/revery#eecb96318c54761abe9cb60ed6986ab820c8cd46"
+        ]
       },
       "overrides": [],
       "dependencies": [
         "revery-text-wrap@github:revery-ui/revery-text-wrap#966383e@d41d8cd9",
         "reperf@1.5.0@d41d8cd9", "rench@1.9.1@d41d8cd9",
         "rebez@github:jchavarri/rebez#03fa3b7@d41d8cd9",
-        "reason-sdl2@2.10.3032@d41d8cd9",
         "reason-native-crash-utils@github:onivim/reason-native-crash-utils#38c8f003a0ab26d6e94932e88af9b58ce758f9a6@d41d8cd9",
         "flex@1.2.3@d41d8cd9",
         "esy-skia@github:revery-ui/esy-skia#d60e5fe@d41d8cd9",
-        "esy-sdl2@2.0.10007@d41d8cd9", "esy-harfbuzz@1.9.1008@d41d8cd9",
+        "esy-sdl2@2.0.10008@d41d8cd9", "esy-harfbuzz@1.9.1008@d41d8cd9",
         "esy-freetype2@2.9.1007@d41d8cd9",
         "@reason-native/console@0.0.3@d41d8cd9",
         "@opam/ppx_deriving@opam:4.5@bb81afdc",
@@ -229,24 +231,6 @@
       "dependencies": [
         "ocaml@4.9.1000@d41d8cd9", "@opam/dune@opam:2.5.1@f38f376e",
         "@esy-ocaml/reason@3.6.0@d41d8cd9"
-      ],
-      "devDependencies": []
-    },
-    "reason-sdl2@2.10.3032@d41d8cd9": {
-      "id": "reason-sdl2@2.10.3032@d41d8cd9",
-      "name": "reason-sdl2",
-      "version": "2.10.3032",
-      "source": {
-        "type": "install",
-        "source": [
-          "archive:https://registry.npmjs.org/reason-sdl2/-/reason-sdl2-2.10.3032.tgz#sha1:fe9afec29bbad691a437726d918a27afbf02937e"
-        ]
-      },
-      "overrides": [],
-      "dependencies": [
-        "refmterr@3.3.2@d41d8cd9", "esy-sdl2@2.0.10007@d41d8cd9",
-        "@opam/dune-configurator@opam:2.5.1@aeb9d8d5",
-        "@opam/dune@opam:2.5.1@f38f376e", "@esy-ocaml/reason@3.6.0@d41d8cd9"
       ],
       "devDependencies": []
     },
@@ -442,14 +426,14 @@
       ],
       "devDependencies": []
     },
-    "esy-sdl2@2.0.10007@d41d8cd9": {
-      "id": "esy-sdl2@2.0.10007@d41d8cd9",
+    "esy-sdl2@2.0.10008@d41d8cd9": {
+      "id": "esy-sdl2@2.0.10008@d41d8cd9",
       "name": "esy-sdl2",
-      "version": "2.0.10007",
+      "version": "2.0.10008",
       "source": {
         "type": "install",
         "source": [
-          "archive:https://registry.npmjs.org/esy-sdl2/-/esy-sdl2-2.0.10007.tgz#sha1:9e8bc6f242563068b7097017439a6b662d9edf23"
+          "archive:https://registry.npmjs.org/esy-sdl2/-/esy-sdl2-2.0.10008.tgz#sha1:e0cfc18598f54ad8ee461edae3e71483c2f0e09f"
         ]
       },
       "overrides": [],

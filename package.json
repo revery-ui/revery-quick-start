@@ -37,17 +37,13 @@
     }
   },
   "dependencies": {
-    "revery": "^0.31.0",
+    "revery": "revery-ui/revery",
     "@opam/dune": "*",
     "timber": "1.0.0",
     "esy-macdylibbundler": "*"
   },
   "devDependencies": {
     "ocaml": "~4.9.0",
-    "@opam/ocaml-lsp-server": "ocaml/ocaml-lsp:ocaml-lsp-server.opam#04733ed",
-    "revery": "*"
-  },
-  "resolutions": {
-    "revery": "link:../revery-master/package.json"
+    "@opam/ocaml-lsp-server": "ocaml/ocaml-lsp:ocaml-lsp-server.opam#04733ed"
   }
 }

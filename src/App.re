@@ -6,7 +6,7 @@ let%component main = () => {
   module Styles = {
     open Style;
 
-    let text = [marginTop(24), color(Color.hex(Theme.reveryBlue))];
+    let text = [marginTop(24), color(Color.hex(Theme.darkBlue))];
   };
 
   let%hook (count, setCount) = React.Hooks.state(0);

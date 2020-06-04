@@ -5,7 +5,7 @@ module Styles = {
   open Style;
 
   let text = (~yOffset) => [
-    color(Color.hex(Theme.reveryBlue)),
+    color(Color.hex(Theme.darkBlue)),
     transform([Transform.TranslateY(yOffset)]),
   ];
 };

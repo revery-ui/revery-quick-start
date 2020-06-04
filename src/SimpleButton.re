@@ -18,7 +18,7 @@ module Styles = {
   open Style;
 
   let button = boxShadowTransparency => [
-    backgroundColor(Color.hex(Theme.reveryBlue)),
+    backgroundColor(Color.hex(Theme.darkBlue)),
     boxShadow(
       ~yOffset=6.,
       ~xOffset=0.,
