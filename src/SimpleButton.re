@@ -1,11 +1,5 @@
-// Revery holds all the primitives e.g. <View>, Colors and more
 open Revery;
-
-// All styling-related functions exist in the Revery.UI-module
 open Revery.UI;
-
-// All Revery-provided non-primitive UI-components like <Button>, <Clickable> reside in
-// Revery.UI.Components
 open Revery.UI.Components;
 
 module Constants = {
