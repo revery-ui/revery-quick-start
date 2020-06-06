@@ -1,5 +1,5 @@
 {
-  "checksum": "7444d0dd3ee724b53f8dab87f8f104bc",
+  "checksum": "0c7032a26eba4da88a2e7bb72f48ac0a",
   "root": "revery-quick-start@link-dev:./package.json",
   "node": {
     "yarn-pkg-config@github:esy-ocaml/yarn-pkg-config#db3a0b63883606dd57c54a7158d560d6cba8cd79@d41d8cd9": {
@@ -42,7 +42,7 @@
       },
       "overrides": [],
       "dependencies": [
-        "revery@github:revery-ui/revery#12fb2dc49077179207838ab2721a2b159ce46036@d41d8cd9",
+        "revery@github:revery-ui/revery#12fb2dc@d41d8cd9",
         "esy-macdylibbundler@0.4.5@d41d8cd9",
         "@opam/dune@opam:2.5.1@f38f376e", "@glennsl/timber@1.2.0@d41d8cd9"
       ],
@@ -51,17 +51,13 @@
         "@opam/ocaml-lsp-server@github:ocaml/ocaml-lsp:ocaml-lsp-server.opam#04733ed@d41d8cd9"
       ]
     },
-    "revery@github:revery-ui/revery#12fb2dc49077179207838ab2721a2b159ce46036@d41d8cd9": {
-      "id":
-        "revery@github:revery-ui/revery#12fb2dc49077179207838ab2721a2b159ce46036@d41d8cd9",
+    "revery@github:revery-ui/revery#12fb2dc@d41d8cd9": {
+      "id": "revery@github:revery-ui/revery#12fb2dc@d41d8cd9",
       "name": "revery",
-      "version":
-        "github:revery-ui/revery#12fb2dc49077179207838ab2721a2b159ce46036",
+      "version": "github:revery-ui/revery#12fb2dc",
       "source": {
         "type": "install",
-        "source": [
-          "github:revery-ui/revery#12fb2dc49077179207838ab2721a2b159ce46036"
-        ]
+        "source": [ "github:revery-ui/revery#12fb2dc" ]
       },
       "overrides": [],
       "dependencies": [
