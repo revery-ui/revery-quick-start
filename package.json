@@ -39,7 +39,7 @@
   "dependencies": {
     "revery": "revery-ui/revery",
     "@opam/dune": "*",
-    "timber": "1.0.0",
+    "@glennsl/timber": "^1.2.0",
     "esy-macdylibbundler": "*"
   },
   "devDependencies": {
