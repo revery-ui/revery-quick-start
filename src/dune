@@ -1,0 +1,6 @@
+(executable
+    (name App)
+    (package App)
+    (preprocess (pps brisk-reconciler.ppx))
+    (public_name App)
+    (libraries bigarray Revery))

@@ -1,18 +1,15 @@
 {
   "name": "revery-quick-start",
-  "version": "1.4.0",
-  "description": "Revery quickstart",
+  "version": "1.4.1",
+  "description": "A template for getting started with Revery",
   "license": "MIT",
   "scripts": {
-   "format": "bash -c \"refmt --in-place *.re\"",
-   "run": "esy x App"
+    "format": "bash -c \"refmt --in-place **/*.re\"",
+    "run": "esy x App"
   },
   "esy": {
     "build": "refmterr dune build -p App",
-    "buildsInSource": "_build",
-    "install": [
-      "esy-installer App.install"
-    ]
+    "buildsInSource": "_build"
   },
   "revery-packager": {
     "bundleName": "ExampleApp",
@@ -20,19 +17,27 @@
     "displayName": "Revery Example App",
     "mainExecutable": "App",
     "windows": {
-      "packages": ["zip"],
+      "packages": [
+        "zip"
+      ],
       "iconFile": "assets/icon.ico"
     },
     "darwin": {
-      "packages": ["tar", "dmg"],
+      "packages": [
+        "tar",
+        "dmg"
+      ],
       "iconFile": "assets/icon.icns"
     },
     "linux": {
-      "packages": ["tar", "appimage"]
+      "packages": [
+        "tar",
+        "appimage"
+      ]
     }
   },
   "dependencies": {
-    "revery": "revery-ui/revery#2fdee68",
+    "revery": "revery-ui/revery#12fb2dc",
     "@opam/dune": "*",
     "@glennsl/timber": "^1.2.0",
     "esy-macdylibbundler": "*"
