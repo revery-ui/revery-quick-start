@@ -2,13 +2,13 @@ open Revery;
 open Revery.UI;
 open Revery.UI.Components;
 
+module Styles = {
+  open Style;
+
+  let text = [marginTop(24), color(Color.hex(Theme.darkBlue))];
+};
+
 let%component main = () => {
-  module Styles = {
-    open Style;
-
-    let text = [marginTop(24), color(Color.hex(Theme.darkBlue))];
-  };
-
   let%hook (count, setCount) = React.Hooks.state(0);
 
   let increment = () => setCount(count => count + 1);

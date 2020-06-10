@@ -25,7 +25,7 @@ module Styles = {
     borderRadius(10.),
   ];
 
-  let buttonText = [backgroundColor(Colors.red), color(Colors.white)];
+  let buttonText = [color(Colors.white)];
 };
 
 let%component make = (~text, ~onClick, ()) => {
