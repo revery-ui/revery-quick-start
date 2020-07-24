@@ -8,7 +8,8 @@
     "run": "esy x App"
   },
   "esy": {
-    "build": "refmterr dune build -p App",
+    "build": "dune build -p App",
+    "buildDev": "refmterr dune build -p App",
     "buildsInSource": "_build"
   },
   "revery-packager": {
