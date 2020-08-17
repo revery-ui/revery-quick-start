@@ -38,8 +38,8 @@
     }
   },
   "dependencies": {
-    "revery": "revery-ui/revery#8fd380c",
-    "@opam/dune": "2.5.0",
+    "revery": "revery-ui/revery#625794e",
+    "@opam/dune": "*",
     "@glennsl/timber": "^1.2.0",
     "esy-macdylibbundler": "*"
   },
