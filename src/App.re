@@ -30,10 +30,11 @@ let%component main = () => {
   </Center>;
 };
 
+let consoleReporter = Timber.Reporter.console(~enableColors=true, ());
 let init = app => {
   Revery.App.initConsole();
 
-  Timber.App.enable();
+  Timber.App.enable(consoleReporter);
   Timber.App.setLevel(Timber.Level.perf);
 
   let win =

@@ -33,7 +33,11 @@ let%component make = (~text, ~onClick, ()) => {
     Hooks.state(Constants.boxShadowNotHoveredTransparency);
 
   let%hook transitionedBoxShadowTransparency =
-    Hooks.transition(~duration=Time.ms(150), boxShadowTransparency);
+    Hooks.transition(
+      ~name="transitionedBoxShadowTransparency",
+      ~duration=Time.ms(150),
+      boxShadowTransparency,
+    );
 
   let updateShadowTransparency = (_event, ~newOpacity) => {
     setBoxShadowTransparency(_prevTransparency => newOpacity);

@@ -13,6 +13,7 @@ module Styles = {
 let%component make = (~delay: Time.t, ~text: string, ()) => {
   let%hook (yOffset, _state, _reset) =
     Hooks.animation(
+      ~name="yOffset",
       Animation.animate(Time.ms(500))
       |> Animation.delay(delay)
       |> Animation.ease(Easing.ease)
@@ -21,6 +22,7 @@ let%component make = (~delay: Time.t, ~text: string, ()) => {
 
   let%hook (animatedOpacity, _state, _reset) =
     Hooks.animation(
+      ~name="animatedOpacity",
       Animation.animate(Time.ms(750))
       |> Animation.delay(delay)
       |> Animation.ease(Easing.ease)

@@ -38,13 +38,13 @@
     }
   },
   "dependencies": {
-    "revery": "revery-ui/revery#ac848c4",
+    "revery": "revery-ui/revery#431e515a00ee46f7bc614a10c2a219aae13179e0",
     "@opam/dune": "2.6.0",
-    "@glennsl/timber": "^1.2.0",
+    "@revery/timber": "*",
     "esy-macdylibbundler": "*"
   },
   "devDependencies": {
     "ocaml": "~4.9.0",
-    "@opam/ocaml-lsp-server": "ocaml/ocaml-lsp:ocaml-lsp-server.opam#04733ed"
+    "@opam/ocaml-lsp-server": "ocaml/ocaml-lsp:ocaml-lsp-server.opam#cb8aba2238ba5b0e5a6fe0a3180f25077496f75a"
   }
 }
